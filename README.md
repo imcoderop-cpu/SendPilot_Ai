@@ -43,6 +43,12 @@ Open **http://127.0.0.1:8000/** or **http://127.0.0.1:8000/dashboard.html**. The
 
 FastAPI's interactive API documentation is at **http://127.0.0.1:8000/docs**; the health endpoint is **http://127.0.0.1:8000/api/health**.
 
+## Deploy the full app on Render
+
+The repository includes a Render Blueprint that deploys the FastAPI backend and frontend together as one web service, so dashboard pages and `/api` requests share the same origin. Use the [Render deploy link](https://render.com/deploy?repo=https://github.com/imcoderop-cpu/SendPilot_Ai), sign in to Render, and review the service before creating it. The initial free service may spin down after inactivity and take a little time to wake up.
+
+Render will ask you to set `OPENROUTER_API_KEY` as a private service environment variable. Enter your own key in Render's dashboard; it is deliberately not stored in GitHub or the deployment blueprint. Until you add a key, the dashboard and PayPal sample ledger still load, while AI endpoints return a setup message. You can add or change it under the service's **Environment** settings. The public app URL and API docs are shown in the Render dashboard after the deployment succeeds.
+
 ## AI provider and API
 
 The backend sends AI requests to OpenRouter; the browser never calls the provider directly and never receives the API key. Configure `OPENROUTER_API_KEY` in the process environment or a root `.env` file. AI endpoints return a consistent JSON envelope:

@@ -19,6 +19,11 @@ python -m pip install -r requirements.txt
 python -m uvicorn backend.main:app --reload
 ```
 
+For a hosted deployment, the repository's root `render.yaml` defines a single
+Render web service for both the FastAPI backend and frontend. Set
+`OPENROUTER_API_KEY` in the hosting provider's private environment settings;
+never put a live key in the blueprint or source control.
+
 Open `http://127.0.0.1:8000/dashboard.html` so the frontend and `/api` requests
 use the FastAPI server on the same origin. If the frontend is hosted separately,
 set `window.SPENDPILOT_API_BASE_URL` to the backend's `/api/` URL before loading
