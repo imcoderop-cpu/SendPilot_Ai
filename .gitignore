@@ -1,0 +1,22 @@
+# Local environment files (the example template is safe to commit).
+.env
+.env.*
+**/.env
+**/.env.*
+!/.env.example
+!**/.env.example
+**/.env/**
+
+# Python artifacts and local virtual environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local tooling and generated files.
+node_modules/
+.pytest_cache/
+.coverage
+*.log
+.DS_Store
+stitch_spendpilot_ai_dashboard.zip

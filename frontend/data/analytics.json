@@ -1,0 +1,876 @@
+{
+  "schema_version": 1,
+  "analytics": {
+    "company_id": "acme_technologies",
+    "as_of_date": "2026-11-01",
+    "currency": "INR",
+    "period": {
+      "start": "2025-11-01",
+      "end": "2026-10-31",
+      "months": 12
+    },
+    "metrics": {
+      "monthly_saas_spend": 3741900,
+      "annualized_saas_spend": 44902800,
+      "monthly_budget": 4200000,
+      "annual_budget": 50400000,
+      "budget_utilization_percent": 89.1,
+      "potential_monthly_savings": 465800,
+      "potential_annual_savings": 5589600,
+      "total_vendors": 55,
+      "total_subscriptions": 55,
+      "active_subscriptions": 54,
+      "departments": 9,
+      "upcoming_renewals_next_30_days": 29,
+      "ghost_licenses": 290,
+      "total_licensed_seats": 2319,
+      "active_users": 2029,
+      "seat_utilization_percent": 87.5,
+      "average_cost_per_employee_monthly": 14968,
+      "business_efficiency_score": 83,
+      "overall_health_score": 83,
+      "transaction_count": 366,
+      "completed_transaction_count": 361,
+      "pending_transaction_count": 2,
+      "failed_transaction_count": 3,
+      "completed_cash_outflow_in_period": 52256536
+    },
+    "spend_trend": {
+      "basis": "Completed PayPal Sandbox invoice amounts including 18% GST; quarterly and annual invoices create natural cash-flow peaks.",
+      "monthly_cash_outflow": [
+        {
+          "month": "2025-11",
+          "cash_outflow": 4396680,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2025-12",
+          "cash_outflow": 4288002,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-01",
+          "cash_outflow": 4274550,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-02",
+          "cash_outflow": 3973296,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-03",
+          "cash_outflow": 4956354,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-04",
+          "cash_outflow": 4431726,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-05",
+          "cash_outflow": 4787496,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-06",
+          "cash_outflow": 3890814,
+          "completed_invoice_count": 29,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-07",
+          "cash_outflow": 3968694,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-08",
+          "cash_outflow": 4361280,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-09",
+          "cash_outflow": 4809090,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-10",
+          "cash_outflow": 4118554,
+          "completed_invoice_count": 28,
+          "normalized_monthly_recurring_spend": 3741900
+        }
+      ],
+      "normalized_monthly_recurring_spend": 3741900
+    },
+    "monthly_charts": {
+      "cash_outflow": [
+        {
+          "month": "2025-11",
+          "cash_outflow": 4396680,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2025-12",
+          "cash_outflow": 4288002,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-01",
+          "cash_outflow": 4274550,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-02",
+          "cash_outflow": 3973296,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-03",
+          "cash_outflow": 4956354,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-04",
+          "cash_outflow": 4431726,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-05",
+          "cash_outflow": 4787496,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-06",
+          "cash_outflow": 3890814,
+          "completed_invoice_count": 29,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-07",
+          "cash_outflow": 3968694,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-08",
+          "cash_outflow": 4361280,
+          "completed_invoice_count": 31,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-09",
+          "cash_outflow": 4809090,
+          "completed_invoice_count": 30,
+          "normalized_monthly_recurring_spend": 3741900
+        },
+        {
+          "month": "2026-10",
+          "cash_outflow": 4118554,
+          "completed_invoice_count": 28,
+          "normalized_monthly_recurring_spend": 3741900
+        }
+      ],
+      "department_spend": [
+        {
+          "department": "Engineering",
+          "monthly_spend": 1293400,
+          "annual_spend": 15520800,
+          "potential_savings_monthly": 150200
+        },
+        {
+          "department": "Product",
+          "monthly_spend": 451000,
+          "annual_spend": 5412000,
+          "potential_savings_monthly": 92800
+        },
+        {
+          "department": "Design",
+          "monthly_spend": 278700,
+          "annual_spend": 3344400,
+          "potential_savings_monthly": 39100
+        },
+        {
+          "department": "Marketing",
+          "monthly_spend": 226600,
+          "annual_spend": 2719200,
+          "potential_savings_monthly": 35600
+        },
+        {
+          "department": "Sales",
+          "monthly_spend": 443000,
+          "annual_spend": 5316000,
+          "potential_savings_monthly": 34300
+        },
+        {
+          "department": "Support",
+          "monthly_spend": 184200,
+          "annual_spend": 2210400,
+          "potential_savings_monthly": 30700
+        },
+        {
+          "department": "HR",
+          "monthly_spend": 21800,
+          "annual_spend": 261600,
+          "potential_savings_monthly": 3300
+        },
+        {
+          "department": "Finance",
+          "monthly_spend": 68700,
+          "annual_spend": 824400,
+          "potential_savings_monthly": 0
+        },
+        {
+          "department": "Operations",
+          "monthly_spend": 774500,
+          "annual_spend": 9294000,
+          "potential_savings_monthly": 79800
+        }
+      ],
+      "savings_trend": [
+        {
+          "month": "2025-11",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2025-11-30T23:59:00Z"
+        },
+        {
+          "month": "2025-12",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2025-12-31T23:59:00Z"
+        },
+        {
+          "month": "2026-01",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-01-31T23:59:00Z"
+        },
+        {
+          "month": "2026-02",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-02-28T23:59:00Z"
+        },
+        {
+          "month": "2026-03",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-03-31T23:59:00Z"
+        },
+        {
+          "month": "2026-04",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-04-30T23:59:00Z"
+        },
+        {
+          "month": "2026-05",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-05-31T23:59:00Z"
+        },
+        {
+          "month": "2026-06",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-06-30T23:59:00Z"
+        },
+        {
+          "month": "2026-07",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-07-31T23:59:00Z"
+        },
+        {
+          "month": "2026-08",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-08-31T23:59:00Z"
+        },
+        {
+          "month": "2026-09",
+          "newly_identified_monthly_opportunity": 0,
+          "estimated_monthly_opportunity": 0,
+          "annualized_opportunity": 0,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-09-30T23:59:00Z"
+        },
+        {
+          "month": "2026-10",
+          "newly_identified_monthly_opportunity": 465800,
+          "estimated_monthly_opportunity": 465800,
+          "annualized_opportunity": 5589600,
+          "realized_savings": 0,
+          "currency": "INR",
+          "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+          "observed_at": "2026-10-31T23:59:00Z"
+        }
+      ]
+    },
+    "department_spend": [
+      {
+        "department": "Engineering",
+        "monthly_spend": 1293400,
+        "annual_spend": 15520800,
+        "potential_savings_monthly": 150200
+      },
+      {
+        "department": "Product",
+        "monthly_spend": 451000,
+        "annual_spend": 5412000,
+        "potential_savings_monthly": 92800
+      },
+      {
+        "department": "Design",
+        "monthly_spend": 278700,
+        "annual_spend": 3344400,
+        "potential_savings_monthly": 39100
+      },
+      {
+        "department": "Marketing",
+        "monthly_spend": 226600,
+        "annual_spend": 2719200,
+        "potential_savings_monthly": 35600
+      },
+      {
+        "department": "Sales",
+        "monthly_spend": 443000,
+        "annual_spend": 5316000,
+        "potential_savings_monthly": 34300
+      },
+      {
+        "department": "Support",
+        "monthly_spend": 184200,
+        "annual_spend": 2210400,
+        "potential_savings_monthly": 30700
+      },
+      {
+        "department": "HR",
+        "monthly_spend": 21800,
+        "annual_spend": 261600,
+        "potential_savings_monthly": 3300
+      },
+      {
+        "department": "Finance",
+        "monthly_spend": 68700,
+        "annual_spend": 824400,
+        "potential_savings_monthly": 0
+      },
+      {
+        "department": "Operations",
+        "monthly_spend": 774500,
+        "annual_spend": 9294000,
+        "potential_savings_monthly": 79800
+      }
+    ],
+    "savings_trend": [
+      {
+        "month": "2025-11",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2025-11-30T23:59:00Z"
+      },
+      {
+        "month": "2025-12",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2025-12-31T23:59:00Z"
+      },
+      {
+        "month": "2026-01",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-01-31T23:59:00Z"
+      },
+      {
+        "month": "2026-02",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-02-28T23:59:00Z"
+      },
+      {
+        "month": "2026-03",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-03-31T23:59:00Z"
+      },
+      {
+        "month": "2026-04",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-04-30T23:59:00Z"
+      },
+      {
+        "month": "2026-05",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-05-31T23:59:00Z"
+      },
+      {
+        "month": "2026-06",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-06-30T23:59:00Z"
+      },
+      {
+        "month": "2026-07",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-07-31T23:59:00Z"
+      },
+      {
+        "month": "2026-08",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-08-31T23:59:00Z"
+      },
+      {
+        "month": "2026-09",
+        "newly_identified_monthly_opportunity": 0,
+        "estimated_monthly_opportunity": 0,
+        "annualized_opportunity": 0,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-09-30T23:59:00Z"
+      },
+      {
+        "month": "2026-10",
+        "newly_identified_monthly_opportunity": 465800,
+        "estimated_monthly_opportunity": 465800,
+        "annualized_opportunity": 5589600,
+        "realized_savings": 0,
+        "currency": "INR",
+        "basis": "cumulative open recommendations identified by month-end; not realized cash savings",
+        "observed_at": "2026-10-31T23:59:00Z"
+      }
+    ],
+    "upcoming_renewals": [
+      {
+        "subscription_id": "sub_024",
+        "name": "1Password",
+        "vendor": "1Password",
+        "renewal_date": "2026-11-05",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 61478,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_001",
+        "name": "Microsoft 365",
+        "vendor": "Microsoft 365",
+        "renewal_date": "2026-11-05",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 217710,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_009",
+        "name": "Google Workspace",
+        "vendor": "Google Workspace",
+        "renewal_date": "2026-11-06",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 92630,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_032",
+        "name": "Supabase",
+        "vendor": "Supabase",
+        "renewal_date": "2026-11-06",
+        "billing_cycle": "Quarterly",
+        "expected_invoice_amount": 65844,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_017",
+        "name": "HubSpot",
+        "vendor": "HubSpot",
+        "renewal_date": "2026-11-07",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 139240,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_025",
+        "name": "Okta",
+        "vendor": "Okta",
+        "renewal_date": "2026-11-08",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 132160,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_002",
+        "name": "Slack",
+        "vendor": "Slack",
+        "renewal_date": "2026-11-08",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 191160,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_010",
+        "name": "Adobe Creative Cloud",
+        "vendor": "Adobe Creative Cloud",
+        "renewal_date": "2026-11-09",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 175820,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_018",
+        "name": "Zendesk",
+        "vendor": "Zendesk",
+        "renewal_date": "2026-11-10",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 82010,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_049",
+        "name": "Chargebee",
+        "vendor": "Chargebee",
+        "renewal_date": "2026-11-11",
+        "billing_cycle": "Yearly",
+        "expected_invoice_amount": 648528,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_026",
+        "name": "Linear",
+        "vendor": "Linear",
+        "renewal_date": "2026-11-11",
+        "billing_cycle": "Quarterly",
+        "expected_invoice_amount": 142308,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_011",
+        "name": "Figma",
+        "vendor": "Figma",
+        "renewal_date": "2026-11-12",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 91096,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_019",
+        "name": "Intercom",
+        "vendor": "Intercom",
+        "renewal_date": "2026-11-13",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 100536,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_004",
+        "name": "GitHub Enterprise",
+        "vendor": "GitHub Enterprise",
+        "renewal_date": "2026-11-14",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 174640,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_012",
+        "name": "Canva",
+        "vendor": "Canva",
+        "renewal_date": "2026-11-15",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 36816,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_035",
+        "name": "Freshservice",
+        "vendor": "Freshservice",
+        "renewal_date": "2026-11-15",
+        "billing_cycle": "Quarterly",
+        "expected_invoice_amount": 128856,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_020",
+        "name": "Datadog",
+        "vendor": "Datadog",
+        "renewal_date": "2026-11-16",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 151040,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_005",
+        "name": "GitHub Copilot",
+        "vendor": "GitHub Copilot",
+        "renewal_date": "2026-11-17",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 138060,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_013",
+        "name": "Jira",
+        "vendor": "Jira",
+        "renewal_date": "2026-11-18",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 97468,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_021",
+        "name": "MongoDB Atlas",
+        "vendor": "MongoDB Atlas",
+        "renewal_date": "2026-11-19",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 76464,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_006",
+        "name": "ChatGPT Team",
+        "vendor": "ChatGPT Team",
+        "renewal_date": "2026-11-20",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 161070,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_029",
+        "name": "Loom",
+        "vendor": "Loom",
+        "renewal_date": "2026-11-20",
+        "billing_cycle": "Quarterly",
+        "expected_invoice_amount": 78942,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_014",
+        "name": "Confluence",
+        "vendor": "Confluence",
+        "renewal_date": "2026-11-21",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 52274,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_022",
+        "name": "Cloudflare",
+        "vendor": "Cloudflare",
+        "renewal_date": "2026-11-22",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 45312,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_007",
+        "name": "AWS",
+        "vendor": "AWS",
+        "renewal_date": "2026-11-23",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 434240,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_015",
+        "name": "Notion",
+        "vendor": "Notion",
+        "renewal_date": "2026-11-24",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 75402,
+        "currency": "INR",
+        "risk_level": "medium",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_023",
+        "name": "Vercel",
+        "vendor": "Vercel",
+        "renewal_date": "2026-11-25",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 49914,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_008",
+        "name": "Azure DevOps",
+        "vendor": "Azure DevOps",
+        "renewal_date": "2026-11-26",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 105610,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      },
+      {
+        "subscription_id": "sub_016",
+        "name": "Salesforce",
+        "vendor": "Salesforce",
+        "renewal_date": "2026-11-27",
+        "billing_cycle": "Monthly",
+        "expected_invoice_amount": 337480,
+        "currency": "INR",
+        "risk_level": "low",
+        "status": "active"
+      }
+    ],
+    "risk_distribution": {
+      "low": 20,
+      "medium": 26,
+      "high": 9
+    },
+    "computed_at": "2026-11-01T08:45:00Z"
+  }
+}

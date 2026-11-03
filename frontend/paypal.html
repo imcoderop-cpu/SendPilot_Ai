@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="shell-type" content="web_dashboard"/>
+  <title>PayPal Ledger • SpendPilot AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <style>
+    html,body{margin:0;padding:0;overscroll-behavior:none}
+    ::-webkit-scrollbar{display:none}
+    .brutal-border{border:3px solid #18181B}
+    .brutal-shadow{box-shadow:4px 4px 0 #18181B}
+    .brutal-shadow-sm{box-shadow:2px 2px 0 #18181B}
+    .brutal-btn:active{transform:translate(4px,4px);box-shadow:0 0 0 #18181B}
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={darkMode:"class",theme:{extend:{
+      colors:{
+        error:"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#3bcf95",
+        "on-primary-fixed-variant":"#581db3",primary:"#420093","on-tertiary-fixed":"#002113",
+        "on-primary":"#ffffff",secondary:"#0051d5","surface-bright":"#fbf8fc",
+        surface:"#fbf8fc","surface-tint":"#713dcc",tertiary:"#003b26",
+        "primary-fixed":"#ebddff","on-tertiary":"#ffffff","on-primary-container":"#c7aaff",
+        "primary-container":"#5b21b6","surface-container-highest":"#e4e1e6",
+        "tertiary-fixed-dim":"#4edea3","surface-container-low":"#f6f2f7",
+        background:"#fbf8fc","on-surface":"#1b1b1e","on-surface-variant":"#4a4453",
+        "error-container":"#ffdad6","tertiary-container":"#005438",
+        "surface-container-lowest":"#ffffff","on-error-container":"#93000a",
+        "tertiary-fixed":"#6ffbbe","on-primary-fixed":"#250059","outline":"#7b7485",
+        "outline-variant":"#ccc3d6","on-secondary":"#ffffff","surface-container":"#f0edf1",
+        "surface-container-high":"#eae7eb"
+      },
+      borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},
+      spacing:{"space-sm":"0.5rem","space-lg":"1.5rem","space-md":"1rem","space-xl":"2.25rem"},
+      fontFamily:{headline:["Space Grotesk"],body:["Plus Jakarta Sans"],mono:["JetBrains Mono"]},
+      fontSize:{"title-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",fontWeight:"700"}],"headline-md":["28px",{lineHeight:"36px",fontWeight:"600"}],"headline-sm":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px"}],"body-sm":["12px",{lineHeight:"18px"}],"label-code":["13px",{lineHeight:"18px"}],"data-metric":["32px",{lineHeight:"38px",fontWeight:"700"}]}
+    }}};
+  </script>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+  <aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest brutal-border border-r-[3px] border-t-0 border-b-0 border-l-0 z-30 flex flex-col justify-between overflow-y-auto">
+    <div class="p-space-md">
+      <div class="mb-space-lg pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0">
+        <div class="font-headline text-[22px] font-bold tracking-tight">SpendPilot <span class="text-primary">AI</span></div>
+        <span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-secondary text-white font-mono text-[10px] uppercase brutal-border border-[2px]">Finance workspace</span>
+      </div>
+      <nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm">
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="subscriptions" href="subscriptions.html"><span class="material-symbols-outlined text-[20px]">credit_card</span>Subscriptions</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="ai-cfo" href="ai_cfo.html"><span class="material-symbols-outlined text-[20px]">smart_toy</span>AI CFO Advisory</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="simulator" href="simulator.html"><span class="material-symbols-outlined text-[20px]">timeline</span>What-If Simulator</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="negotiator" href="negotiator.html"><span class="material-symbols-outlined text-[20px]">handshake</span>AI Negotiator</a>
+        <a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm" data-path="paypal" href="paypal.html"><span class="material-symbols-outlined text-[20px]">payments</span>PayPal Ledger</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="doctor" href="doctor.html"><span class="material-symbols-outlined text-[20px]">vital_signs</span>Subscription Doctor</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="analytics" href="analytics.html"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Analytics</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="reports" href="reports.html"><span class="material-symbols-outlined text-[20px]">summarize</span>Executive Reports</a>
+        <a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline text-body-md hover:bg-surface-container transition-all" data-path="settings" href="settings.html"><span class="material-symbols-outlined text-[20px]">settings</span>Company Settings</a>
+      </nav>
+    </div>
+    <div class="p-space-md border-t-[3px] border-on-surface bg-surface-container-low flex flex-col gap-3">
+      <a href="paypal.html" class="flex items-center justify-between px-2.5 py-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px]">
+        <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span><span class="font-mono text-[11px] font-semibold">PayPal Sandbox Ledger</span></span>
+        <span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span>
+      </a>
+      <a href="dashboard.html" class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-lowest brutal-border brutal-shadow-sm">
+        <img src="assets/pfp.jpg" alt="Alex Rivera" class="w-8 h-8 rounded-full object-cover brutal-border border-[2px]"/>
+        <span class="flex flex-col"><span class="font-headline text-body-sm font-bold" data-user-name>Alex Rivera</span><span class="text-[11px] text-on-surface-variant" data-user-role>CFO</span></span>
+      </a>
+    </div>
+  </aside>
+  <div class="pl-[260px]">
+    <header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest brutal-border border-b-[3px] border-t-0 border-r-0 border-l-0 z-20 px-6 flex items-center justify-between">
+      <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">payments</span><span class="font-headline text-title-md font-bold">PayPal Sandbox</span><span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-mono text-[10px] font-bold brutal-border border-[1.5px]">CONNECTED</span></div>
+      <span class="font-mono text-[11px] text-outline">ACME TECHNOLOGIES · INR</span>
+    </header>
+    <main class="relative pt-16 min-h-screen">
+      <div id="paypal-ledger-page" class="p-space-lg xl:p-space-xl max-w-[1600px] mx-auto flex flex-col gap-space-lg">
+        <section class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-md border-b-[3px] border-on-surface">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2.5 py-0.5 rounded-full bg-secondary text-white font-mono text-[10px] uppercase tracking-wider brutal-border border-[2px]">Recurring billing &amp; invoices</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-mono text-[10px] uppercase tracking-wider brutal-border border-[2px]">Sandbox dataset</span>
+            </div>
+            <h1 class="font-headline text-headline-lg font-bold tracking-tight">PayPal Ledger</h1>
+            <p class="font-body-md text-on-surface-variant max-w-3xl">A dedicated view of recurring software payments, invoice history and payment health. This sandbox ledger feeds subscription analysis and finance recommendations.</p>
+          </div>
+          <a href="subscriptions.html" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-primary-container text-on-primary font-headline text-body-sm font-bold brutal-border brutal-shadow-sm brutal-btn"><span class="material-symbols-outlined text-[18px]">credit_card</span>Review subscriptions</a>
+        </section>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md" aria-label="PayPal account summary">
+          <article class="p-space-md rounded-2xl bg-surface-container-lowest brutal-border brutal-shadow flex flex-col gap-2"><span class="font-mono text-[10px] uppercase text-outline">Synced payment volume</span><strong id="paypal-total-volume" class="font-headline text-data-metric">—</strong><span class="font-body-sm text-on-surface-variant">All-time sandbox ledger</span></article>
+          <article class="p-space-md rounded-2xl bg-surface-container-lowest brutal-border brutal-shadow flex flex-col gap-2"><span class="font-mono text-[10px] uppercase text-outline">Invoices tracked</span><strong id="paypal-invoice-count" class="font-headline text-data-metric">—</strong><span class="font-body-sm text-on-surface-variant">Recurring invoice history</span></article>
+          <article class="p-space-md rounded-2xl bg-surface-container-lowest brutal-border brutal-shadow flex flex-col gap-2"><span class="font-mono text-[10px] uppercase text-outline">Completed payments</span><strong id="paypal-completed-count" class="font-headline text-data-metric text-tertiary-container">—</strong><span class="font-body-sm text-on-surface-variant">Successfully settled</span></article>
+          <article class="p-space-md rounded-2xl bg-surface-container-lowest brutal-border brutal-shadow flex flex-col gap-2"><span class="font-mono text-[10px] uppercase text-outline">Needs attention</span><strong id="paypal-attention-count" class="font-headline text-data-metric text-error">—</strong><span id="paypal-attention-detail" class="font-body-sm text-on-surface-variant">Pending or failed payments</span></article>
+        </section>
+
+        <section class="grid grid-cols-1 xl:grid-cols-3 gap-space-md">
+          <article class="xl:col-span-2 p-space-lg rounded-2xl bg-surface-container-lowest brutal-border brutal-shadow flex flex-col gap-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b-[3px] border-on-surface">
+              <div><h2 class="font-headline text-headline-sm font-bold">Payment history</h2><p id="paypal-ledger-range" class="font-body-sm text-on-surface-variant">Loading transaction ledger…</p></div>
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input id="paypal-search" type="search" placeholder="Search vendor or invoice" class="px-3 py-2 rounded-xl bg-background brutal-border border-[2px] text-body-sm focus:outline-none"/>
+                <select id="paypal-status-filter" class="px-3 py-2 rounded-xl bg-background brutal-border border-[2px] text-body-sm focus:outline-none" aria-label="Filter payment status">
+                  <option value="all">All statuses</option><option value="completed">Completed</option><option value="pending">Pending</option><option value="failed">Failed</option>
+                </select>
+              </div>
+            </div>
+            <div id="paypal-ledger-error" role="alert" class="hidden p-3 rounded-xl bg-error-container text-on-error-container brutal-border border-[2px] font-body-sm"></div>
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[700px] text-left">
+                <thead><tr class="font-mono text-[10px] uppercase text-outline border-b-[2px] border-surface-container-high"><th class="py-3 px-3">Vendor / invoice</th><th class="py-3 px-3">Department</th><th class="py-3 px-3">Payment method</th><th class="py-3 px-3">Date</th><th class="py-3 px-3">Status</th><th class="py-3 px-3 text-right">Amount</th></tr></thead>
+                <tbody id="paypal-transactions-body" class="divide-y-[2px] divide-surface-container-high"></tbody>
+              </table>
+            </div>
+            <p id="paypal-empty-state" class="hidden py-8 text-center font-body-md text-on-surface-variant">No transactions match these filters.</p>
+          </article>
+          <aside class="flex flex-col gap-space-md">
+            <article class="p-space-lg rounded-2xl bg-surface-container-lowest brutal-border brutal-shadow flex flex-col gap-4">
+              <div class="flex items-center gap-3 pb-3 border-b-[3px] border-on-surface"><span class="w-10 h-10 rounded-xl bg-secondary text-on-secondary flex items-center justify-center brutal-border border-[2px]"><span class="material-symbols-outlined">account_balance</span></span><div><h2 class="font-headline text-title-md font-bold">Merchant connection</h2><p class="font-body-sm text-on-surface-variant">PayPal Sandbox</p></div></div>
+              <div class="flex justify-between gap-3 text-body-sm"><span class="text-on-surface-variant">Account</span><strong id="paypal-connected-account" class="text-right">—</strong></div>
+              <div class="flex justify-between gap-3 text-body-sm"><span class="text-on-surface-variant">Merchant ID</span><strong id="paypal-merchant-id" class="font-mono text-right">—</strong></div>
+              <div class="flex justify-between gap-3 text-body-sm"><span class="text-on-surface-variant">Last synced</span><strong id="paypal-last-sync" class="text-right">—</strong></div>
+              <div class="flex justify-between gap-3 text-body-sm"><span class="text-on-surface-variant">Sync status</span><strong id="paypal-sync-status" class="text-tertiary-container text-right">—</strong></div>
+            </article>
+            <article class="p-space-lg rounded-2xl bg-primary-fixed brutal-border brutal-shadow flex flex-col gap-3">
+              <span class="font-mono text-[10px] uppercase text-on-primary-fixed">Finance workflow</span>
+              <h2 class="font-headline text-headline-sm font-bold text-on-primary-fixed">Payments inform better decisions.</h2>
+              <p class="font-body-sm text-on-primary-fixed">Transaction history is cross-referenced with software subscriptions to surface recurring spend, invoice exceptions and renewal risk.</p>
+              <a href="ai_cfo.html" class="inline-flex items-center gap-2 font-headline text-body-sm font-bold text-primary">Open AI CFO <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+            </article>
+          </aside>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/pages/paypal.js"></script>
+  <script src="js/demo/demo-config.js"></script>
+  <script src="js/demo/demo-controller.js"></script>
+  <script src="js/demo/demo-bootstrap.js"></script>
+</body>
+</html>

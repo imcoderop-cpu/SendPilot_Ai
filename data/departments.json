@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "company_id": "acme_technologies",
+  "departments": [
+    {
+      "id": "dept_engineering",
+      "company_id": "acme_technologies",
+      "name": "Engineering",
+      "head_count": 78,
+      "monthly_spend": 1293400,
+      "annual_spend": 15520800,
+      "department_budget_monthly": 1310400,
+      "department_budget_annual": 15724800,
+      "potential_savings_monthly": 150200,
+      "potential_savings_annual": 1802400,
+      "top_tools": [
+        {
+          "subscription_id": "sub_007",
+          "name": "AWS",
+          "monthly_cost": 368000
+        },
+        {
+          "subscription_id": "sub_004",
+          "name": "GitHub Enterprise",
+          "monthly_cost": 148000
+        },
+        {
+          "subscription_id": "sub_020",
+          "name": "Datadog",
+          "monthly_cost": 128000
+        }
+      ],
+      "health_score": 76,
+      "seat_utilization_percent": 86.5
+    },
+    {
+      "id": "dept_product",
+      "company_id": "acme_technologies",
+      "name": "Product",
+      "head_count": 22,
+      "monthly_spend": 451000,
+      "annual_spend": 5412000,
+      "department_budget_monthly": 369600,
+      "department_budget_annual": 4435200,
+      "potential_savings_monthly": 92800,
+      "potential_savings_annual": 1113600,
+      "top_tools": [
+        {
+          "subscription_id": "sub_006",
+          "name": "ChatGPT Team",
+          "monthly_cost": 136500
+        },
+        {
+          "subscription_id": "sub_015",
+          "name": "Notion",
+          "monthly_cost": 63900
+        },
+        {
+          "subscription_id": "sub_043",
+          "name": "Amplitude",
+          "monthly_cost": 61800
+        }
+      ],
+      "health_score": 67,
+      "seat_utilization_percent": 74.9
+    },
+    {
+      "id": "dept_design",
+      "company_id": "acme_technologies",
+      "name": "Design",
+      "head_count": 18,
+      "monthly_spend": 278700,
+      "annual_spend": 3344400,
+      "department_budget_monthly": 302400,
+      "department_budget_annual": 3628800,
+      "potential_savings_monthly": 39100,
+      "potential_savings_annual": 469200,
+      "top_tools": [
+        {
+          "subscription_id": "sub_010",
+          "name": "Adobe Creative Cloud",
+          "monthly_cost": 149000
+        },
+        {
+          "subscription_id": "sub_011",
+          "name": "Figma",
+          "monthly_cost": 77200
+        },
+        {
+          "subscription_id": "sub_028",
+          "name": "Dropbox Business",
+          "monthly_cost": 32700
+        }
+      ],
+      "health_score": 75,
+      "seat_utilization_percent": 80.8
+    },
+    {
+      "id": "dept_marketing",
+      "company_id": "acme_technologies",
+      "name": "Marketing",
+      "head_count": 24,
+      "monthly_spend": 226600,
+      "annual_spend": 2719200,
+      "department_budget_monthly": 403200,
+      "department_budget_annual": 4838400,
+      "potential_savings_monthly": 35600,
+      "potential_savings_annual": 427200,
+      "top_tools": [
+        {
+          "subscription_id": "sub_017",
+          "name": "HubSpot",
+          "monthly_cost": 118000
+        },
+        {
+          "subscription_id": "sub_012",
+          "name": "Canva",
+          "monthly_cost": 31200
+        },
+        {
+          "subscription_id": "sub_029",
+          "name": "Loom",
+          "monthly_cost": 22300
+        }
+      ],
+      "health_score": 80,
+      "seat_utilization_percent": 74.6
+    },
+    {
+      "id": "dept_sales",
+      "company_id": "acme_technologies",
+      "name": "Sales",
+      "head_count": 36,
+      "monthly_spend": 443000,
+      "annual_spend": 5316000,
+      "department_budget_monthly": 604800,
+      "department_budget_annual": 7257600,
+      "potential_savings_monthly": 34300,
+      "potential_savings_annual": 411600,
+      "top_tools": [
+        {
+          "subscription_id": "sub_016",
+          "name": "Salesforce",
+          "monthly_cost": 286000
+        },
+        {
+          "subscription_id": "sub_047",
+          "name": "LinkedIn Sales Navigator",
+          "monthly_cost": 81000
+        },
+        {
+          "subscription_id": "sub_048",
+          "name": "Apollo.io",
+          "monthly_cost": 52300
+        }
+      ],
+      "health_score": 83,
+      "seat_utilization_percent": 92.6
+    },
+    {
+      "id": "dept_support",
+      "company_id": "acme_technologies",
+      "name": "Support",
+      "head_count": 28,
+      "monthly_spend": 184200,
+      "annual_spend": 2210400,
+      "department_budget_monthly": 470400,
+      "department_budget_annual": 5644800,
+      "potential_savings_monthly": 30700,
+      "potential_savings_annual": 368400,
+      "top_tools": [
+        {
+          "subscription_id": "sub_019",
+          "name": "Intercom",
+          "monthly_cost": 85200
+        },
+        {
+          "subscription_id": "sub_018",
+          "name": "Zendesk",
+          "monthly_cost": 69500
+        },
+        {
+          "subscription_id": "sub_037",
+          "name": "Freshdesk",
+          "monthly_cost": 17900
+        }
+      ],
+      "health_score": 86,
+      "seat_utilization_percent": 81.6
+    },
+    {
+      "id": "dept_hr",
+      "company_id": "acme_technologies",
+      "name": "HR",
+      "head_count": 10,
+      "monthly_spend": 21800,
+      "annual_spend": 261600,
+      "department_budget_monthly": 168000,
+      "department_budget_annual": 2016000,
+      "potential_savings_monthly": 3300,
+      "potential_savings_annual": 39600,
+      "top_tools": [
+        {
+          "subscription_id": "sub_036",
+          "name": "Keka",
+          "monthly_cost": 21800
+        }
+      ],
+      "health_score": 90,
+      "seat_utilization_percent": 80.0
+    },
+    {
+      "id": "dept_finance",
+      "company_id": "acme_technologies",
+      "name": "Finance",
+      "head_count": 12,
+      "monthly_spend": 68700,
+      "annual_spend": 824400,
+      "department_budget_monthly": 201600,
+      "department_budget_annual": 2419200,
+      "potential_savings_monthly": 0,
+      "potential_savings_annual": 0,
+      "top_tools": [
+        {
+          "subscription_id": "sub_049",
+          "name": "Chargebee",
+          "monthly_cost": 45800
+        },
+        {
+          "subscription_id": "sub_053",
+          "name": "Microsoft Power BI",
+          "monthly_cost": 18600
+        },
+        {
+          "subscription_id": "sub_050",
+          "name": "TallyPrime",
+          "monthly_cost": 4300
+        }
+      ],
+      "health_score": 93,
+      "seat_utilization_percent": 100.0
+    },
+    {
+      "id": "dept_operations",
+      "company_id": "acme_technologies",
+      "name": "Operations",
+      "head_count": 22,
+      "monthly_spend": 774500,
+      "annual_spend": 9294000,
+      "department_budget_monthly": 369600,
+      "department_budget_annual": 4435200,
+      "potential_savings_monthly": 79800,
+      "potential_savings_annual": 957600,
+      "top_tools": [
+        {
+          "subscription_id": "sub_001",
+          "name": "Microsoft 365",
+          "monthly_cost": 184500
+        },
+        {
+          "subscription_id": "sub_002",
+          "name": "Slack",
+          "monthly_cost": 162000
+        },
+        {
+          "subscription_id": "sub_025",
+          "name": "Okta",
+          "monthly_cost": 112000
+        }
+      ],
+      "health_score": 55,
+      "seat_utilization_percent": 92.4
+    }
+  ]
+}

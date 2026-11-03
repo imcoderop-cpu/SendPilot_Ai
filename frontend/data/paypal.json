@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "paypal": {
+    "company_id": "acme_technologies",
+    "environment": "sandbox",
+    "data_origin": "synthetic_paypal_sandbox_ledger",
+    "connected_account": "finance@acme-technologies.in (Sandbox merchant)",
+    "merchant_id": "FYB7D9M3K2L8Q",
+    "connection_status": "connected_demo",
+    "sync_status": "synced",
+    "last_sync": "2026-11-01T08:40:00Z",
+    "sync_window": {
+      "start": "2025-11-01",
+      "end": "2026-10-31"
+    },
+    "invoice_count": 366,
+    "total_synced_amount": 52556256,
+    "currency": "INR",
+    "pending_payments": 2,
+    "completed_payments": 361,
+    "failed_payments": 3,
+    "recent_payments": [
+      {
+        "transaction_id": "txn_0192",
+        "subscription_id": "sub_016",
+        "subscription_name": "Salesforce",
+        "amount": 337480,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-27",
+        "invoice_number": "ACM-202610-0192",
+        "department": "Sales"
+      },
+      {
+        "transaction_id": "txn_0365",
+        "subscription_id": "sub_054",
+        "subscription_name": "Mural",
+        "amount": 280368,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-26",
+        "invoice_number": "ACM-202610-0365",
+        "department": "Design"
+      },
+      {
+        "transaction_id": "txn_0324",
+        "subscription_id": "sub_031",
+        "subscription_name": "Sentry",
+        "amount": 135936,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-26",
+        "invoice_number": "ACM-202610-0324",
+        "department": "Engineering"
+      },
+      {
+        "transaction_id": "txn_0096",
+        "subscription_id": "sub_008",
+        "subscription_name": "Azure DevOps",
+        "amount": 105610,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-26",
+        "invoice_number": "ACM-202610-0096",
+        "department": "Engineering"
+      },
+      {
+        "transaction_id": "txn_0276",
+        "subscription_id": "sub_023",
+        "subscription_name": "Vercel",
+        "amount": 49914,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-25",
+        "invoice_number": "ACM-202610-0276",
+        "department": "Product"
+      },
+      {
+        "transaction_id": "txn_0180",
+        "subscription_id": "sub_015",
+        "subscription_name": "Notion",
+        "amount": 75402,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-24",
+        "invoice_number": "ACM-202610-0180",
+        "department": "Product"
+      },
+      {
+        "transaction_id": "txn_0084",
+        "subscription_id": "sub_007",
+        "subscription_name": "AWS",
+        "amount": 434240,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-23",
+        "invoice_number": "ACM-202610-0084",
+        "department": "Engineering"
+      },
+      {
+        "transaction_id": "txn_0264",
+        "subscription_id": "sub_022",
+        "subscription_name": "Cloudflare",
+        "amount": 45312,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-22",
+        "invoice_number": "ACM-202610-0264",
+        "department": "Engineering"
+      },
+      {
+        "transaction_id": "txn_0348",
+        "subscription_id": "sub_037",
+        "subscription_name": "Freshdesk",
+        "amount": 63366,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-21",
+        "invoice_number": "ACM-202610-0348",
+        "department": "Support"
+      },
+      {
+        "transaction_id": "txn_0168",
+        "subscription_id": "sub_014",
+        "subscription_name": "Confluence",
+        "amount": 52274,
+        "currency": "INR",
+        "status": "completed",
+        "date": "2026-10-21",
+        "invoice_number": "ACM-202610-0168",
+        "department": "Engineering"
+      }
+    ],
+    "security_note": "Synthetic demo data only; no live PayPal account, credential, or payment is represented."
+  }
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.brutal-border{border:3px solid #18181B;}.brutal-shadow{box-shadow:4px 4px 0px #18181B;}.brutal-shadow-sm{box-shadow:2px 2px 0px #18181B;}.brutal-shadow-lg{box-shadow:6px 6px 0px #18181B;}.brutal-btn:active{transform:translate(4px,4px);box-shadow:0px 0px 0px #18181B;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#3bcf95","on-primary-fixed-variant":"#581db3","surface-dim":"#dcd9dd","primary":"#420093","on-tertiary-fixed":"#002113","on-primary":"#ffffff","secondary-container":"#316bf3","surface-bright":"#fbf8fc","surface":"#fbf8fc","secondary-fixed-dim":"#b4c5ff","surface-tint":"#713dcc","inverse-primary":"#d3bbff","tertiary":"#003b26","primary-fixed":"#ebddff","on-tertiary":"#ffffff","inverse-on-surface":"#f3f0f4","on-primary-container":"#c7aaff","primary-container":"#5b21b6","on-secondary-fixed-variant":"#003ea8","surface-container-highest":"#e4e1e6","tertiary-fixed-dim":"#4edea3","surface-container-low":"#f6f2f7","on-secondary-fixed":"#00174b","background":"#fbf8fc","primary-fixed-dim":"#d3bbff","on-error":"#ffffff","secondary-fixed":"#dbe1ff","on-surface":"#1b1b1e","surface-variant":"#e4e1e6","surface-container-high":"#eae7eb","on-surface-variant":"#4a4453","on-secondary-container":"#fefcff","error-container":"#ffdad6","secondary":"#0051d5","on-background":"#1b1b1e","tertiary-container":"#005438","surface-container-lowest":"#ffffff","on-error-container":"#93000a","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#250059","outline":"#7b7485","outline-variant":"#ccc3d6","on-secondary":"#ffffff","surface-container":"#f0edf1","inverse-surface":"#303033"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","gutter-mobile":"1rem","margin":"2.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.25rem"},"fontFamily":{"title-md":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"data-metric":["Space Grotesk"],"label-badge":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"display-hero":["Space Grotesk"]},"fontSize":{"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-code":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"data-metric":["32px",{"lineHeight":"38px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}]}}}};</script></head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+<aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest brutal-border border-r-[3px] border-t-0 border-b-0 border-l-0 z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="flex items-center gap-2 mb-space-lg pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-[22px] font-bold text-on-surface tracking-tight leading-none">SpendPilot</span><span class="font-headline-sm text-[22px] font-bold text-primary tracking-tight leading-none">AI</span></div><div class="mt-1"><span class="inline-block px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] -rotate-1">AI CFO v2.4</span></div></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm"><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="subscriptions" href="subscriptions.html"><span class="material-symbols-outlined text-[20px]">credit_card</span>Subscriptions</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-cfo" href="ai_cfo.html"><span class="material-symbols-outlined text-[20px]">smart_toy</span>AI CFO Advisory</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="simulator" href="simulator.html"><span class="material-symbols-outlined text-[20px]">timeline</span>What-If Simulator</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="negotiator" href="negotiator.html"><span class="material-symbols-outlined text-[20px]">handshake</span>AI Negotiator</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="paypal" href="paypal.html"><span class="material-symbols-outlined text-[20px]">payments</span>PayPal Ledger</a>
+<a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-xl transition-all bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm" data-path="doctor" href="doctor.html"><span class="material-symbols-outlined text-[20px]">vital_signs</span>Subscription Doctor</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics" href="analytics.html"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Analytics</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="reports.html"><span class="material-symbols-outlined text-[20px]">summarize</span>Executive Reports</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="settings.html"><span class="material-symbols-outlined text-[20px]">settings</span>Company Settings</a></nav></div><div class="p-space-md border-t-[3px] border-on-surface flex flex-col gap-3 bg-surface-container-low"><div id="sidebar-paypal-sync" data-action="open-paypal" class="flex items-center justify-between px-2.5 py-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] cursor-pointer hover:bg-surface-container transition-all"><div class="flex items-center gap-2"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-container"></span></span><span class="font-label-code text-[11px] text-on-surface font-semibold">PayPal Live Sync</span></div><span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><button id="theme-switch-btn" data-action="toggle-theme" aria-label="Theme Switch" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><button id="sidebar-notif-btn" data-action="open-notifications" aria-label="Notifications" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5 relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span id="sidebar-notif-dot" class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full brutal-border border-[1.5px]"></span></button></div><span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">PRO ORG</span></div><div id="sidebar-profile-card" data-action="open-profile" class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-lowest brutal-border brutal-shadow-sm cursor-pointer hover:bg-surface-container transition-all"><div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div><div class="flex flex-col min-w-0 flex-1"><span class="font-headline-sm text-body-sm font-bold text-on-surface truncate"><span data-user-name>Alex Rivera</span><span class="font-body-sm text-[11px] text-on-surface-variant truncate"><span data-user-role>CFO / Founder</span></div><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[20px]">unfold_more</span></button></div></div></aside>
+<div class="pl-[260px]">
+<header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest brutal-border border-b-[3px] border-t-0 border-r-0 border-l-0 z-40 px-6 flex items-center justify-between gap-4"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">auto_awesome</span><input id="global-omnibar-input" data-action="open-command-palette" class="w-full pl-9 pr-20 py-1.5 bg-background rounded-full brutal-border border-[2px] text-body-sm font-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest cursor-pointer" placeholder="Ask SpendPilot AI or search subscriptions (Cmd + K)..." type="text" readonly><span class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-code text-[10px] text-on-surface brutal-border border-[1px]">⌘K</span></div></div><div class="flex items-center gap-3 shrink-0"><button id="header-org-btn" data-action="open-org-switcher" class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low brutal-border border-[2px] font-headline-sm text-body-sm text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">business_center</span><span class="font-bold">Acme Technologies</span><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold" data-company-tier>Series B</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><div id="header-paypal-sync" data-action="open-paypal" class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-sm brutal-border border-[2px] cursor-pointer hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[16px] text-tertiary-container">sync</span><span class="font-bold text-[12px]">PayPal Synced</span></div><div class="flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-body-sm brutal-border border-[2px]"><span class="material-symbols-outlined text-[16px] text-primary">favorite</span><span class="font-bold text-[12px]" data-health-score>Health: 89/100</span></div><button id="header-notif-btn" data-action="open-notifications" aria-label="Notifications" class="relative p-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface hover:scale-105 transition-transform" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span id="header-notif-dot" class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full brutal-border border-[1.5px]"></span></button><button id="header-profile-btn" data-action="open-profile" aria-label="User Profile" class="flex items-center rounded-full brutal-border border-[2px] hover:scale-105 transition-transform" type="button"><div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div></button></div></header>
+<main class="relative pt-16 bg-background min-h-screen">
+  <div class="flex flex-col w-full">
+    <div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg w-full max-w-[1600px] mx-auto">
+      
+      <!-- Top Title & Badge -->
+      <section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+        <div>
+          <div class="flex items-center gap-space-xs flex-wrap">
+            <span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] -rotate-1">
+              Diagnostic Mode
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-code text-[11px] font-bold brutal-border border-[2px]">
+              AI RX ENGINE v3.1
+            </span>
+          </div>
+          <h1 class="font-headline-lg text-headline-lg text-on-surface mt-1">🩺 Subscription Doctor</h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">Automated pathology for phantom licenses, ghost subscriptions, and overlapping SaaS suites.</p>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <button type="button" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-md brutal-border brutal-shadow brutal-btn transition-transform hover:-translate-y-0.5" data-demo-simulate data-demo-message="SSO scan preview complete. Live identity-provider logs are not connected.">
+            <span class="material-symbols-outlined text-[18px]">biotech</span>
+            <span>Scan SSO Logs</span>
+          </button>
+          <button type="button" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md brutal-border brutal-shadow brutal-btn transition-transform hover:-translate-y-0.5" data-demo-simulate data-demo-message="All prescriptions marked for demo review. No subscriptions or licenses were changed.">
+            <span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim">medication</span>
+            <span>Apply All Rx Treatments</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Diagnostic Mosaic Grid (4 Cards) -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+        <div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="font-label-badge text-label-badge uppercase text-outline">Zombie Subscriptions</span>
+            <span class="p-1.5 rounded-lg bg-error-container brutal-border border-[2px]">
+              <span class="material-symbols-outlined text-[18px] text-error">skull</span>
+            </span>
+          </div>
+          <div class="my-3">
+            <div id="doc-zombie-count" class="font-data-metric text-data-metric text-error font-bold">4 Tools</div>
+            <div class="font-label-code text-body-sm text-outline">0 logins past 60 days</div>
+          </div>
+          <div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-error text-on-error font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+            Waste: ₹28,500 / mo
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="font-label-badge text-label-badge uppercase text-outline">Phantom Seats</span>
+            <span class="p-1.5 rounded-lg bg-surface-container brutal-border border-[2px]">
+              <span class="material-symbols-outlined text-[18px] text-primary">person_off</span>
+            </span>
+          </div>
+          <div class="my-3">
+            <div id="doc-ghost-seats" class="font-data-metric text-data-metric text-on-surface font-bold">14 Seats</div>
+            <div class="font-label-code text-body-sm text-outline">Ex-employees & inactive devs</div>
+          </div>
+          <div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+            Waste: ₹18,400 / mo
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="font-label-badge text-label-badge uppercase text-outline">Redundant Software</span>
+            <span class="p-1.5 rounded-lg bg-surface-container brutal-border border-[2px]">
+              <span class="material-symbols-outlined text-[18px] text-secondary">content_copy</span>
+            </span>
+          </div>
+          <div class="my-3">
+            <div class="font-data-metric text-data-metric text-on-surface font-bold">3 Duplicates</div>
+            <div class="font-label-code text-body-sm text-outline">Overlapping feature sets</div>
+          </div>
+          <div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-surface-container-highest font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+            Waste: ₹27,100 / mo
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="font-label-badge text-label-badge uppercase text-outline">Reclaimable Run-Rate</span>
+            <span class="p-1.5 rounded-lg bg-tertiary-fixed brutal-border border-[2px]">
+              <span class="material-symbols-outlined text-[18px] text-tertiary-container">health_and_safety</span>
+            </span>
+          </div>
+          <div class="my-3">
+            <div id="doc-reclaimable-total" class="font-data-metric text-data-metric text-tertiary-container font-bold">₹74,000</div>
+            <div class="font-label-code text-body-sm text-outline">Per month potential savings</div>
+          </div>
+          <div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+            97% AI Confidence
+          </div>
+        </div>
+      </section>
+
+      <!-- Forensic Diagnostic Ledger Table -->
+      <section class="bg-surface-container-lowest rounded-2xl brutal-border brutal-shadow p-space-lg flex flex-col gap-space-md">
+        <div class="flex items-center justify-between flex-wrap gap-2 pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0">
+          <div>
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">Pathology Findings & Prescriptions</h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Real-time diagnosis cross-referenced against PayPal recurring billing records and Google SSO telemetry.</p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[11px] uppercase font-bold brutal-border border-[1.5px]">
+            5 Incurred Anomalies
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b-[2px] border-surface-container-highest font-label-code text-body-sm text-on-surface-variant">
+                <th class="py-3 px-4">Tool / Vendor</th>
+                <th class="py-3 px-4">Severity</th>
+                <th class="py-3 px-4">Diagnostic Symptom</th>
+                <th class="py-3 px-4">Bleed Rate</th>
+                <th class="py-3 px-4">Doctor's Prescription</th>
+                <th class="py-3 px-4 text-right">Treatment</th>
+              </tr>
+            </thead>
+            <tbody id="doctor-findings-tbody" class="divide-y-[2px] divide-surface-container-high font-body-md text-on-surface">
+              <!-- Row 1 -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center font-bold brutal-border border-[2px]">L</div>
+                  <div>
+                    <span class="font-headline-sm text-body-lg font-bold block">Loom Enterprise</span>
+                    <span class="font-label-code text-[11px] text-outline">Video Messaging</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="px-2.5 py-0.5 rounded-full bg-error text-on-error font-label-badge text-[10px] font-bold uppercase brutal-border border-[1.5px]">CRITICAL</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-body-sm font-semibold text-error">9 Zombie Accounts</span>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">Ex-contractors with active billing; 0 videos created in 90d.</p>
+                </td>
+                <td class="py-4 px-4 font-label-code font-bold text-on-surface">₹14,500/mo</td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-[13px] font-bold text-tertiary-container block">Revoke 9 phantom seats immediately</span>
+                  <span class="text-outline text-[11px]">Consolidate to Slack Huddles for quick recording</span>
+                </td>
+                <td class="py-4 px-4 text-right">
+                  <button type="button" class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn" data-demo-simulate data-demo-message="Seat-revocation request marked for demo review. No seats were revoked.">Revoke Seats</button>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center font-bold brutal-border border-[2px]">N</div>
+                  <div>
+                    <span class="font-headline-sm text-body-lg font-bold block">Notion AI Addon</span>
+                    <span class="font-label-code text-[11px] text-outline">Productivity</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] font-bold uppercase brutal-border border-[1.5px]">HIGH</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-body-sm font-semibold text-primary">Overlapping Capability</span>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">Team already has ChatGPT Enterprise + GitHub Copilot.</p>
+                </td>
+                <td class="py-4 px-4 font-label-code font-bold text-on-surface">₹12,600/mo</td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-[13px] font-bold text-tertiary-container block">Prune Notion AI bundle</span>
+                  <span class="text-outline text-[11px]">Keep core Notion workspace plan</span>
+                </td>
+                <td class="py-4 px-4 text-right">
+                  <button type="button" class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container" data-demo-simulate data-demo-message="Add-on pruning marked for demo review. No subscription was changed.">Prune Addon</button>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center font-bold brutal-border border-[2px]">A</div>
+                  <div>
+                    <span class="font-headline-sm text-body-lg font-bold block">Asana Business</span>
+                    <span class="font-label-code text-[11px] text-outline">Project Management</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] font-bold uppercase brutal-border border-[1.5px]">HIGH</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-body-sm font-semibold text-primary">Duplicate Tool Stack</span>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">Engineering uses Linear exclusively; only 4 active users on Asana.</p>
+                </td>
+                <td class="py-4 px-4 font-label-code font-bold text-on-surface">₹19,200/mo</td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-[13px] font-bold text-tertiary-container block">Migrate 4 users to Linear Free</span>
+                  <span class="text-outline text-[11px]">Cancel entire Asana subscription upon next cycle</span>
+                </td>
+                <td class="py-4 px-4 text-right">
+                  <button type="button" class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn" data-demo-simulate data-demo-message="Cancellation review marked for demo. No cancellation was scheduled.">Initiate Cancel</button>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center font-bold brutal-border border-[2px]">Z</div>
+                  <div>
+                    <span class="font-headline-sm text-body-lg font-bold block">Zoom Enterprise</span>
+                    <span class="font-label-code text-[11px] text-outline">Conferencing</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-[10px] font-bold uppercase brutal-border border-[1.5px]">MODERATE</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-body-sm font-semibold text-on-surface">Tier Over-provisioning</span>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">Paying for 500-attendee webinars; avg company meeting is 6 people.</p>
+                </td>
+                <td class="py-4 px-4 font-label-code font-bold text-on-surface">₹16,000/mo</td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-[13px] font-bold text-tertiary-container block">Downgrade tier to Zoom Pro</span>
+                  <span class="text-outline text-[11px]">Saves 45% with identical core functionality</span>
+                </td>
+                <td class="py-4 px-4 text-right">
+                  <button type="button" class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container" data-demo-simulate data-demo-message="Downgrade recommendation marked for demo review. No plan was changed.">Downgrade</button>
+                </td>
+              </tr>
+
+              <!-- Row 5 -->
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-xl bg-surface-container-highest flex items-center justify-center font-bold brutal-border border-[2px]">M</div>
+                  <div>
+                    <span class="font-headline-sm text-body-lg font-bold block">Miro Enterprise</span>
+                    <span class="font-label-code text-[11px] text-outline">Whiteboarding</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-[10px] font-bold uppercase brutal-border border-[1.5px]">MODERATE</span>
+                </td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-body-sm font-semibold text-on-surface">Tool Overlap with FigJam</span>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">Design team active in FigJam; Miro boards abandoned since February.</p>
+                </td>
+                <td class="py-4 px-4 font-label-code font-bold text-on-surface">₹11,700/mo</td>
+                <td class="py-4 px-4">
+                  <span class="font-body-sm text-[13px] font-bold text-tertiary-container block">Retire Miro & standardize on FigJam</span>
+                  <span class="text-outline text-[11px]">Free export available to FigJam format</span>
+                </td>
+                <td class="py-4 px-4 text-right">
+                  <button type="button" class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn" data-demo-simulate data-demo-message="Retirement recommendation marked for demo review. No tools were removed.">Retire Miro</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Side-by-Side Redundancy Inspection Card -->
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+        <div class="bg-surface-container-lowest p-space-lg rounded-2xl brutal-border brutal-shadow flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">Overlap Case #1</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-code text-[11px] font-bold brutal-border border-[1px]">Duplicate Cost: ₹23,500/mo</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">Linear vs Asana vs Jira</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Your company pays for 3 distinct issue tracking systems across 3 different departments. 82% of tickets are on Linear, while Asana and Jira only hold archive tasks.</p>
+          <div class="p-4 rounded-xl bg-surface-container-low brutal-border border-[2px] flex flex-col gap-2">
+            <span class="font-label-code text-[12px] font-bold text-primary">Doctor Recommendation:</span>
+            <span class="font-body-md text-on-surface">Consolidate all project management into Linear. Close Jira Enterprise and Asana seats to free up ₹2,82,000 annually.</span>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-lowest p-space-lg rounded-2xl brutal-border brutal-shadow flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">Overlap Case #2</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-code text-[11px] font-bold brutal-border border-[1px]">Duplicate Cost: ₹18,200/mo</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">Loom vs Zoom Clips vs Slack Huddles</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Your team has full enterprise video sharing capabilities inside your existing Slack and Zoom subscriptions, making separate Loom seats 100% redundant.</p>
+          <div class="p-4 rounded-xl bg-surface-container-low brutal-border border-[2px] flex flex-col gap-2">
+            <span class="font-label-code text-[12px] font-bold text-primary">Doctor Recommendation:</span>
+            <span class="font-body-md text-on-surface">Switch to built-in Slack canvas and Loom alternative inside Slack. Reclaim ₹2,18,400 per year with zero friction.</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+</div>
+
+  <script src="js/api.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/pages/doctor.js"></script>
+  <script src="js/demo/demo-config.js"></script>
+  <script src="js/demo/demo-controller.js"></script>
+  <script src="js/demo/demo-bootstrap.js"></script>
+</body>
+</html>

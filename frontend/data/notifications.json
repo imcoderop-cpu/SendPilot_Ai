@@ -1,0 +1,798 @@
+{
+  "schema_version": 1,
+  "company_id": "acme_technologies",
+  "notifications": [
+    {
+      "id": "ntf_021",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "MongoDB Atlas invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0252 for MongoDB Atlas; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": false,
+      "timestamp": "2026-11-01T16:00:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_021"
+      },
+      "transaction_id": "txn_0252"
+    },
+    {
+      "id": "ntf_007",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "AWS invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0084 for AWS; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-11-01T14:54:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_007"
+      },
+      "transaction_id": "txn_0084"
+    },
+    {
+      "id": "ntf_014",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Confluence invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0168 for Confluence; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-11-01T09:57:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_014"
+      },
+      "transaction_id": "txn_0168"
+    },
+    {
+      "id": "ntf_048",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-10 executive report is ready",
+      "message": "October 2026 Executive SaaS Finance Report: ₹4,118,554 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": false,
+      "timestamp": "2026-11-01T09:33:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_012"
+      }
+    },
+    {
+      "id": "ntf_047",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-09 executive report is ready",
+      "message": "September 2026 Executive SaaS Finance Report: ₹4,809,090 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": true,
+      "timestamp": "2026-11-01T09:30:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_011"
+      }
+    },
+    {
+      "id": "ntf_046",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-08 executive report is ready",
+      "message": "August 2026 Executive SaaS Finance Report: ₹4,361,280 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": false,
+      "timestamp": "2026-11-01T09:27:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_010"
+      }
+    },
+    {
+      "id": "ntf_045",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-07 executive report is ready",
+      "message": "July 2026 Executive SaaS Finance Report: ₹3,968,694 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": true,
+      "timestamp": "2026-11-01T09:24:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_009"
+      }
+    },
+    {
+      "id": "ntf_044",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-06 executive report is ready",
+      "message": "June 2026 Executive SaaS Finance Report: ₹3,890,814 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": false,
+      "timestamp": "2026-11-01T09:21:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_008"
+      }
+    },
+    {
+      "id": "ntf_043",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-05 executive report is ready",
+      "message": "May 2026 Executive SaaS Finance Report: ₹4,787,496 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": true,
+      "timestamp": "2026-11-01T09:18:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_007"
+      }
+    },
+    {
+      "id": "ntf_042",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-04 executive report is ready",
+      "message": "April 2026 Executive SaaS Finance Report: ₹4,431,726 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": false,
+      "timestamp": "2026-11-01T09:15:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_006"
+      }
+    },
+    {
+      "id": "ntf_041",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-03 executive report is ready",
+      "message": "March 2026 Executive SaaS Finance Report: ₹4,956,354 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": true,
+      "timestamp": "2026-11-01T09:12:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_005"
+      }
+    },
+    {
+      "id": "ntf_040",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-02 executive report is ready",
+      "message": "February 2026 Executive SaaS Finance Report: ₹3,973,296 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": false,
+      "timestamp": "2026-11-01T09:09:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_004"
+      }
+    },
+    {
+      "id": "ntf_039",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2026-01 executive report is ready",
+      "message": "January 2026 Executive SaaS Finance Report: ₹4,274,550 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": true,
+      "timestamp": "2026-11-01T09:06:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_003"
+      }
+    },
+    {
+      "id": "ntf_038",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2025-12 executive report is ready",
+      "message": "December 2025 Executive SaaS Finance Report: ₹4,288,002 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": false,
+      "timestamp": "2026-11-01T09:03:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_002"
+      }
+    },
+    {
+      "id": "ntf_037",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "report_ready",
+      "priority": "low",
+      "title": "2025-11 executive report is ready",
+      "message": "November 2025 Executive SaaS Finance Report: ₹4,396,680 completed cash outflow and ₹465,800/month current estimated opportunity.",
+      "icon": "summarize",
+      "read": true,
+      "timestamp": "2026-11-01T09:00:00Z",
+      "related_resource": {
+        "type": "report",
+        "id": "rep_001"
+      }
+    },
+    {
+      "id": "ntf_020",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Datadog invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0240 for Datadog; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-31T15:51:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_020"
+      },
+      "transaction_id": "txn_0240"
+    },
+    {
+      "id": "ntf_006",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "ChatGPT Team invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0072 for ChatGPT Team; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-31T13:45:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_006"
+      },
+      "transaction_id": "txn_0072"
+    },
+    {
+      "id": "ntf_028",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review GitHub Enterprise",
+      "message": "Review 8 inactive seats and right-size the Enterprise Cloud allocation. Estimated opportunity: ₹17,800/month; confidence 87%.",
+      "icon": "auto_awesome",
+      "read": true,
+      "timestamp": "2026-10-31T13:21:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_004"
+      }
+    },
+    {
+      "id": "ntf_013",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Jira invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0156 for Jira; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": false,
+      "timestamp": "2026-10-31T08:48:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_013"
+      },
+      "transaction_id": "txn_0156"
+    },
+    {
+      "id": "ntf_012",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Canva invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0144 for Canva; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-30T19:39:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_012"
+      },
+      "transaction_id": "txn_0144"
+    },
+    {
+      "id": "ntf_031",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "low",
+      "title": "AI audit: review AWS",
+      "message": "Review the last 90 days of usage and right-size the service tier. Estimated opportunity: ₹44,200/month; confidence 79%.",
+      "icon": "auto_awesome",
+      "read": true,
+      "timestamp": "2026-10-30T16:42:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_007"
+      }
+    },
+    {
+      "id": "ntf_019",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Intercom invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0228 for Intercom; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-30T14:42:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_019"
+      },
+      "transaction_id": "txn_0228"
+    },
+    {
+      "id": "ntf_005",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "GitHub Copilot invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0060 for GitHub Copilot; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": false,
+      "timestamp": "2026-10-30T12:36:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_005"
+      },
+      "transaction_id": "txn_0060"
+    },
+    {
+      "id": "ntf_011",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Figma invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0132 for Figma; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-29T18:30:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_011"
+      },
+      "transaction_id": "txn_0132"
+    },
+    {
+      "id": "ntf_018",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "medium",
+      "title": "Zendesk invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0216 for Zendesk; invoice status: pending.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-29T13:33:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_018"
+      },
+      "transaction_id": "txn_0216"
+    },
+    {
+      "id": "ntf_004",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "GitHub Enterprise invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0048 for GitHub Enterprise; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-29T11:27:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_004"
+      },
+      "transaction_id": "txn_0048"
+    },
+    {
+      "id": "ntf_034",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review Adobe Creative Cloud",
+      "message": "Review 6 inactive seats and right-size the All Apps for Teams allocation. Estimated opportunity: ₹22,400/month; confidence 96%.",
+      "icon": "auto_awesome",
+      "read": true,
+      "timestamp": "2026-10-29T11:03:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_010"
+      }
+    },
+    {
+      "id": "ntf_024",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "renewal_due",
+      "priority": "medium",
+      "title": "1Password renewal is due soon",
+      "message": "1Password (Business) is scheduled for renewal on 2026-11-05 at its monthly cadence.",
+      "icon": "event",
+      "read": true,
+      "timestamp": "2026-10-28T19:27:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_024"
+      },
+      "transaction_id": "txn_0288"
+    },
+    {
+      "id": "ntf_010",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Adobe Creative Cloud invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0120 for Adobe Creative Cloud; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-28T17:21:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_010"
+      },
+      "transaction_id": "txn_0120"
+    },
+    {
+      "id": "ntf_017",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "renewal_due",
+      "priority": "medium",
+      "title": "HubSpot renewal is due soon",
+      "message": "HubSpot (Marketing Hub Professional) is scheduled for renewal on 2026-11-07 at its monthly cadence.",
+      "icon": "event",
+      "read": false,
+      "timestamp": "2026-10-28T12:24:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_017"
+      },
+      "transaction_id": "txn_0204"
+    },
+    {
+      "id": "ntf_003",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_failed",
+      "priority": "high",
+      "title": "Zoom PayPal Sandbox payment needs review",
+      "message": "The ACM-202610-0036 invoice attempt for Zoom failed on 2026-10-11; the subscription is marked past due.",
+      "icon": "warning",
+      "read": true,
+      "timestamp": "2026-10-28T10:18:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_003"
+      },
+      "transaction_id": "txn_0036"
+    },
+    {
+      "id": "ntf_023",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Vercel invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0276 for Vercel; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-27T18:18:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_023"
+      },
+      "transaction_id": "txn_0276"
+    },
+    {
+      "id": "ntf_009",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "renewal_due",
+      "priority": "medium",
+      "title": "Google Workspace renewal is due soon",
+      "message": "Google Workspace (Business Standard) is scheduled for renewal on 2026-11-06 at its monthly cadence.",
+      "icon": "event",
+      "read": false,
+      "timestamp": "2026-10-27T16:12:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_009"
+      },
+      "transaction_id": "txn_0108"
+    },
+    {
+      "id": "ntf_016",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Salesforce invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0192 for Salesforce; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-27T11:15:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_016"
+      },
+      "transaction_id": "txn_0192"
+    },
+    {
+      "id": "ntf_002",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "renewal_due",
+      "priority": "medium",
+      "title": "Slack renewal is due soon",
+      "message": "Slack (Business+) is scheduled for renewal on 2026-11-08 at its monthly cadence.",
+      "icon": "event",
+      "read": true,
+      "timestamp": "2026-10-27T09:09:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_002"
+      },
+      "transaction_id": "txn_0024"
+    },
+    {
+      "id": "ntf_022",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Cloudflare invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0264 for Cloudflare; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-26T17:09:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_022"
+      },
+      "transaction_id": "txn_0264"
+    },
+    {
+      "id": "ntf_008",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Azure DevOps invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0096 for Azure DevOps; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-26T15:03:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_008"
+      },
+      "transaction_id": "txn_0096"
+    },
+    {
+      "id": "ntf_026",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review Slack",
+      "message": "Review 17 inactive seats and right-size the Business+ allocation. Estimated opportunity: ₹14,600/month; confidence 85%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-26T11:07:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_002"
+      }
+    },
+    {
+      "id": "ntf_015",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "payment_update",
+      "priority": "low",
+      "title": "Notion invoice synced",
+      "message": "PayPal Sandbox recorded invoice ACM-202610-0180 for Notion; invoice status: completed.",
+      "icon": "receipt_long",
+      "read": true,
+      "timestamp": "2026-10-26T10:06:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_015"
+      },
+      "transaction_id": "txn_0180"
+    },
+    {
+      "id": "ntf_001",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "renewal_due",
+      "priority": "medium",
+      "title": "Microsoft 365 renewal is due soon",
+      "message": "Microsoft 365 (Business Premium) is scheduled for renewal on 2026-11-05 at its monthly cadence.",
+      "icon": "event",
+      "read": false,
+      "timestamp": "2026-10-26T08:00:00Z",
+      "related_resource": {
+        "type": "subscription",
+        "id": "sub_001"
+      },
+      "transaction_id": "txn_0012"
+    },
+    {
+      "id": "ntf_029",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review GitHub Copilot",
+      "message": "Review 14 inactive seats and right-size the Business allocation. Estimated opportunity: ₹21,100/month; confidence 88%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-25T14:28:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_005"
+      }
+    },
+    {
+      "id": "ntf_032",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "low",
+      "title": "AI audit: review Azure DevOps",
+      "message": "Review 3 inactive seats and right-size the Basic + Test Plans allocation. Estimated opportunity: ₹4,500/month; confidence 80%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-24T17:49:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_008"
+      }
+    },
+    {
+      "id": "ntf_035",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review Figma",
+      "message": "Review 8 inactive seats and right-size the Organization allocation. Estimated opportunity: ₹10,800/month; confidence 84%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-23T12:10:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_011"
+      }
+    },
+    {
+      "id": "ntf_027",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "high",
+      "title": "AI audit: review Zoom",
+      "message": "Review 11 inactive seats and right-size the Workplace Business allocation. Estimated opportunity: ₹14,300/month; confidence 86%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-20T12:14:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_003"
+      }
+    },
+    {
+      "id": "ntf_030",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review ChatGPT Team",
+      "message": "Review 16 inactive seats and right-size the Team allocation. Estimated opportunity: ₹24,600/month; confidence 92%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-19T15:35:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_006"
+      }
+    },
+    {
+      "id": "ntf_033",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review Google Workspace",
+      "message": "Review 13 inactive seats and right-size the Business Standard allocation. Estimated opportunity: ₹9,400/month; confidence 87%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-18T10:56:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_009"
+      }
+    },
+    {
+      "id": "ntf_036",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review Canva",
+      "message": "Review 6 inactive seats and right-size the Teams allocation. Estimated opportunity: ₹3,700/month; confidence 85%.",
+      "icon": "auto_awesome",
+      "read": false,
+      "timestamp": "2026-10-17T13:17:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_012"
+      }
+    },
+    {
+      "id": "ntf_025",
+      "company_id": "acme_technologies",
+      "user_id": "user_alex_rivera",
+      "type": "recommendation_ready",
+      "priority": "medium",
+      "title": "AI audit: review Microsoft 365",
+      "message": "Review 13 inactive seats and right-size the Business Premium allocation. Estimated opportunity: ₹14,800/month; confidence 84%.",
+      "icon": "auto_awesome",
+      "read": true,
+      "timestamp": "2026-10-15T10:00:00Z",
+      "related_resource": {
+        "type": "recommendation",
+        "id": "rec_001"
+      }
+    }
+  ]
+}

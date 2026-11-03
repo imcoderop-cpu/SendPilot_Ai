@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "business_health": {
+    "company_id": "acme_technologies",
+    "as_of_date": "2026-11-01",
+    "overall_health_score": 83,
+    "score_scale": "0-100",
+    "rating": "Healthy with targeted optimization opportunities",
+    "financial_health": 92,
+    "subscription_efficiency": 87,
+    "renewal_risk": 57,
+    "ai_confidence": 86,
+    "optimization_score": 81,
+    "cost_efficiency": 93,
+    "score_components": {
+      "financial_health": {
+        "score": 92,
+        "weight_percent": 25,
+        "basis": "Monthly normalized spend versus approved SaaS budget."
+      },
+      "subscription_efficiency": {
+        "score": 87,
+        "weight_percent": 25,
+        "basis": "Active assigned seats divided by total licensed seats."
+      },
+      "renewal_risk": {
+        "score": 57,
+        "weight_percent": 15,
+        "basis": "Risk-adjusted portfolio score; lower-risk renewals score higher."
+      },
+      "ai_confidence": {
+        "score": 86,
+        "weight_percent": 10,
+        "basis": "Mean confidence of the current recommendation set."
+      },
+      "optimization_score": {
+        "score": 81,
+        "weight_percent": 15,
+        "basis": "Current estimated opportunity relative to normalized recurring spend."
+      },
+      "cost_efficiency": {
+        "score": 93,
+        "weight_percent": 10,
+        "basis": "Budget-utilization efficiency with a soft penalty above 80%."
+      }
+    },
+    "calculation_version": "spendpilot-health-v1",
+    "source_metrics": {
+      "monthly_saas_spend": 3741900,
+      "monthly_budget": 4200000,
+      "inactive_licenses": 290,
+      "high_risk_subscriptions": 9,
+      "recommendation_count": 45
+    },
+    "calculated_at": "2026-11-01T08:45:00Z"
+  }
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.brutal-border{border:3px solid #18181B;}.brutal-shadow{box-shadow:4px 4px 0px #18181B;}.brutal-shadow-sm{box-shadow:2px 2px 0px #18181B;}.brutal-shadow-lg{box-shadow:6px 6px 0px #18181B;}.brutal-btn:active{transform:translate(4px,4px);box-shadow:0px 0px 0px #18181B;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#3bcf95","on-primary-fixed-variant":"#581db3","surface-dim":"#dcd9dd","primary":"#420093","on-tertiary-fixed":"#002113","on-primary":"#ffffff","secondary-container":"#316bf3","surface-bright":"#fbf8fc","surface":"#fbf8fc","secondary-fixed-dim":"#b4c5ff","surface-tint":"#713dcc","inverse-primary":"#d3bbff","tertiary":"#003b26","primary-fixed":"#ebddff","on-tertiary":"#ffffff","inverse-on-surface":"#f3f0f4","on-primary-container":"#c7aaff","primary-container":"#5b21b6","on-secondary-fixed-variant":"#003ea8","surface-container-highest":"#e4e1e6","tertiary-fixed-dim":"#4edea3","surface-container-low":"#f6f2f7","on-secondary-fixed":"#00174b","background":"#fbf8fc","primary-fixed-dim":"#d3bbff","on-error":"#ffffff","secondary-fixed":"#dbe1ff","on-surface":"#1b1b1e","surface-variant":"#e4e1e6","surface-container-high":"#eae7eb","on-surface-variant":"#4a4453","on-secondary-container":"#fefcff","error-container":"#ffdad6","secondary":"#0051d5","on-background":"#1b1b1e","tertiary-container":"#005438","surface-container-lowest":"#ffffff","on-error-container":"#93000a","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#250059","outline":"#7b7485","outline-variant":"#ccc3d6","on-secondary":"#ffffff","surface-container":"#f0edf1","inverse-surface":"#303033"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","gutter-mobile":"1rem","margin":"2.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.25rem"},"fontFamily":{"title-md":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"data-metric":["Space Grotesk"],"label-badge":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"display-hero":["Space Grotesk"]},"fontSize":{"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-code":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"data-metric":["32px",{"lineHeight":"38px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest brutal-border border-r-[3px] border-t-0 border-b-0 border-l-0 z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="flex items-center gap-2 mb-space-lg pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-[22px] font-bold text-on-surface tracking-tight leading-none">SpendPilot</span><span class="font-headline-sm text-[22px] font-bold text-primary tracking-tight leading-none">AI</span></div><div class="mt-1"><span class="inline-block px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] -rotate-1">AI CFO v2.4</span></div></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm"><a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-xl transition-all bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="subscriptions" href="subscriptions.html"><span class="material-symbols-outlined text-[20px]">credit_card</span>Subscriptions</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-cfo" href="ai_cfo.html"><span class="material-symbols-outlined text-[20px]">smart_toy</span>AI CFO Advisory</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="simulator" href="simulator.html"><span class="material-symbols-outlined text-[20px]">timeline</span>What-If Simulator</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="negotiator" href="negotiator.html"><span class="material-symbols-outlined text-[20px]">handshake</span>AI Negotiator</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="paypal" href="paypal.html"><span class="material-symbols-outlined text-[20px]">payments</span>PayPal Ledger</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="doctor" href="doctor.html"><span class="material-symbols-outlined text-[20px]">vital_signs</span>Subscription Doctor</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics" href="analytics.html"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Analytics</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="reports.html"><span class="material-symbols-outlined text-[20px]">summarize</span>Executive Reports</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="settings.html"><span class="material-symbols-outlined text-[20px]">settings</span>Company Settings</a></nav></div><div class="p-space-md border-t-[3px] border-on-surface flex flex-col gap-3 bg-surface-container-low"><div id="sidebar-paypal-sync" data-action="open-paypal" class="flex items-center justify-between px-2.5 py-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] cursor-pointer hover:bg-surface-container transition-all"><div class="flex items-center gap-2"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-container"></span></span><span class="font-label-code text-[11px] text-on-surface font-semibold">PayPal Live Sync</span></div><span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><button id="theme-switch-btn" data-action="toggle-theme" aria-label="Theme Switch" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><button id="sidebar-notif-btn" data-action="open-notifications" aria-label="Notifications" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5 relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span id="sidebar-notif-dot" class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full brutal-border border-[1.5px]"></span></button></div><span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">PRO ORG</span></div><div id="sidebar-profile-card" data-action="open-profile" class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-lowest brutal-border brutal-shadow-sm cursor-pointer hover:bg-surface-container transition-all"><div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div><div class="flex flex-col min-w-0 flex-1"><span class="font-headline-sm text-body-sm font-bold text-on-surface truncate"><span data-user-name>Alex Rivera</span><span class="font-body-sm text-[11px] text-on-surface-variant truncate"><span data-user-role>CFO / Founder</span></div><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[20px]">unfold_more</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest brutal-border border-b-[3px] border-t-0 border-r-0 border-l-0 z-40 px-6 flex items-center justify-between gap-4"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">auto_awesome</span><input id="global-omnibar-input" data-action="open-command-palette" class="w-full pl-9 pr-20 py-1.5 bg-background rounded-full brutal-border border-[2px] text-body-sm font-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest cursor-pointer" placeholder="Ask SpendPilot AI or search subscriptions (Cmd + K)..." type="text" readonly><span class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-code text-[10px] text-on-surface brutal-border border-[1px]">⌘K</span></div></div><div class="flex items-center gap-3 shrink-0"><button id="header-org-btn" data-action="open-org-switcher" class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low brutal-border border-[2px] font-headline-sm text-body-sm text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">business_center</span><span class="font-bold">Acme Technologies</span><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold" data-company-tier>Series B</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><div id="header-paypal-sync" data-action="open-paypal" class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-sm brutal-border border-[2px] cursor-pointer hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[16px] text-tertiary-container">sync</span><span class="font-bold text-[12px]">PayPal Synced</span></div><div class="flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-body-sm brutal-border border-[2px]"><span class="material-symbols-outlined text-[16px] text-primary">favorite</span><span class="font-bold text-[12px]" data-health-score>Health: 89/100</span></div><button id="header-notif-btn" data-action="open-notifications" aria-label="Notifications" class="relative p-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface hover:scale-105 transition-transform" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span id="header-notif-dot" class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full brutal-border border-[1.5px]"></span></button><button id="header-profile-btn" data-action="open-profile" aria-label="User Profile" class="flex items-center rounded-full brutal-border border-[2px] hover:scale-105 transition-transform" type="button"><div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div></button></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Outer Dashboard Canvas -->
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg w-full max-w-[1600px] mx-auto">
+<!-- Top Greeting & Header Bar -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Good Morning, Alex 👋</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase brutal-border border-[2px] brutal-shadow-sm -rotate-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+            Demo Audit Ready
+          </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">Here is a dataset-backed SaaS cashflow audit and AI-assisted finance briefing.</p>
+</div>
+<!-- Financial Health Score Badge -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest p-3 px-5 rounded-2xl brutal-border brutal-shadow shrink-0">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="transparent" r="19" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-tertiary-container" cx="24" cy="24" fill="transparent" r="19" stroke="currentColor" stroke-dasharray="119.38" stroke-dashoffset="13.13" stroke-linecap="round" stroke-width="4.5"></circle>
+</svg>
+<span class="absolute font-headline-sm text-body-sm font-bold text-on-surface">89</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">Health Score</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-container inline-block"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">89/100</span>
+<span class="font-body-sm text-body-sm font-bold text-on-tertiary-fixed-variant">Optimal Efficiency</span>
+</div>
+</div>
+</section>
+<!-- Executive AI Intelligence Banner -->
+<section class="w-full bg-primary-fixed rounded-2xl brutal-border brutal-shadow p-space-lg lg:p-space-xl relative overflow-hidden">
+<!-- Decorative brutalist shape stamp -->
+<div class="absolute -right-8 -bottom-8 pointer-events-none opacity-10">
+<span class="material-symbols-outlined text-[240px] text-primary">psychology</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] brutal-shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+              SpendPilot Intelligence
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-code text-[11px] font-bold brutal-border border-[2px]">
+              Local demo dataset
+            </span>
+</div>
+<div class="flex items-center gap-2 text-on-primary-fixed-variant font-label-code text-body-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span id="dash-snapshot-date">Dataset snapshot</span>
+</div>
+</div>
+<div class="max-w-4xl">
+<h2 id="dash-banner-heading" class="font-headline-md text-headline-md text-on-primary-fixed font-bold leading-tight">
+            We audited 38 active software subscriptions across Engineering &amp; Marketing: discovered <span class="bg-surface-container-lowest px-2 py-0.5 rounded-lg brutal-border border-[2px] text-primary inline-block rotate-[-0.5deg]">₹82,000</span> in immediate reclaimable annual waste.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+            14 ghost licenses detected across Loom, Zoom, and AWS test sandboxes. 2 vendor contracts expire within 7 days.
+          </p>
+</div>
+<!-- 4 Quick Action Neo-Brutalist Buttons -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-2">
+<button id="btn-quick-negotiate" class="flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-md font-bold brutal-border brutal-shadow hover:translate-x-[-1px] hover:translate-y-[-1px] brutal-btn transition-all" type="button"><span class="material-symbols-outlined text-[18px]">bolt</span><span>Run Auto-Negotiate</span></button>
+<button id="btn-quick-report" class="flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-md font-bold brutal-border brutal-shadow hover:translate-x-[-1px] hover:translate-y-[-1px] brutal-btn transition-all" type="button"><span class="material-symbols-outlined text-[18px]">analytics</span><span>Generate CFO Report</span></button>
+<button id="btn-quick-phantom" class="flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-md font-bold brutal-border brutal-shadow hover:translate-x-[-1px] hover:translate-y-[-1px] brutal-btn transition-all" type="button"><span class="material-symbols-outlined text-[18px]">person_off</span><span>Analyze Phantom Seats</span></button>
+<button id="btn-quick-whatif" class="flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-md font-bold brutal-border brutal-shadow hover:translate-x-[-1px] hover:translate-y-[-1px] brutal-btn transition-all" type="button"><span class="material-symbols-outlined text-[18px]">magic_button</span><span>Run What-If Simulation</span></button>
+</div>
+</div>
+</section>
+<!-- Key KPI Metric Grid (5 Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-outline">Monthly SaaS Spend</span>
+<span class="p-1.5 rounded-lg bg-surface-container brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[18px] text-primary">payments</span>
+</span>
+</div>
+<div class="my-3">
+<div id="kpi-monthly-spend" class="font-data-metric text-data-metric text-on-surface font-bold">₹10,39,917</div>
+<div class="font-label-code text-body-sm text-outline">per active month</div>
+</div>
+<div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+          +2.4% vs last mo
+        </div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-outline">Potential Savings</span>
+<span class="p-1.5 rounded-lg bg-tertiary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">savings</span>
+</span>
+</div>
+<div class="my-3">
+<div id="kpi-potential-savings" class="font-data-metric text-data-metric text-tertiary-container font-bold">₹27,43,800</div>
+<div class="font-label-code text-body-sm text-outline">reclaimable per year</div>
+</div>
+<div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          <span id="kpi-savings-confidence">86% AI confidence</span>
+        </div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-outline">Renewals This Month</span>
+<span class="p-1.5 rounded-lg bg-surface-container brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[18px] text-secondary">event_repeat</span>
+</span>
+</div>
+<div class="my-3">
+<div id="kpi-renewals" class="font-data-metric text-data-metric text-on-surface font-bold">8 Software</div>
+<div id="kpi-renewal-list" class="font-label-code text-body-sm text-outline">Upcoming renewals</div>
+</div>
+<div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+          Snapshot window: 30 days
+        </div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-outline">Phantom Licenses</span>
+<span class="p-1.5 rounded-lg bg-surface-container brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[18px] text-error">person_alert</span>
+</span>
+</div>
+<div class="my-3">
+<div id="kpi-ghost-seats" class="font-data-metric text-data-metric text-on-surface font-bold">42 Seats</div>
+<div class="font-label-code text-body-sm text-outline">inactive seats in current snapshot</div>
+</div>
+<div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span>
+          Opportunity estimates pending review
+        </div>
+</div>
+<!-- KPI 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl brutal-border brutal-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase text-outline">PayPal Sandbox Ledger</span>
+<span class="p-1.5 rounded-lg bg-surface-container brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync_alt</span>
+</span>
+</div>
+<div class="my-3">
+<div id="kpi-paypal-synced" class="font-data-metric text-data-metric text-on-surface font-bold">₹10.4L Synced</div>
+<div id="kpi-paypal-invoice-count" class="font-label-code text-body-sm text-outline">Synthetic invoices</div>
+</div>
+<div class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-body-sm font-bold brutal-border border-[1.5px]">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Demo data only
+        </div>
+</div>
+</section>
+<!-- Main Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: 60% (col-span-7) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Spend & Budget Interactive Chart Card -->
+<div class="bg-surface-container-lowest rounded-2xl brutal-border brutal-shadow p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-2 pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Monthly Spend vs Budget Ceiling</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-code text-[11px] font-bold">FY 2024-25</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous tracking of SaaS burn against quarterly departmental allocations.</p>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1 rounded-full bg-surface-container font-label-code text-body-sm font-bold brutal-border border-[2px] hover:bg-surface-container-high" data-placeholder="Chart date-range filtering is a demo placeholder and is not connected yet." type="button">6M</button>
+<button class="px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-code text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm" data-placeholder="Chart date-range filtering is a demo placeholder and is not connected yet." type="button">1Y</button>
+<button class="px-3 py-1 rounded-full bg-surface-container font-label-code text-body-sm font-bold brutal-border border-[2px] hover:bg-surface-container-high" data-placeholder="Chart date-range filtering is a demo placeholder and is not connected yet." type="button">ALL</button>
+</div>
+</div>
+<!-- Departmental Allocation Breakdown Badges -->
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-badge text-label-badge uppercase text-outline">Dept Split:</span>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-code text-[12px] font-bold brutal-border border-[1.5px]">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+              Engineering 42%
+            </div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[12px] font-bold brutal-border border-[1.5px]">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Sales &amp; CRM 25%
+            </div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-code text-[12px] font-bold brutal-border border-[1.5px]">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+              Product &amp; Design 18%
+            </div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-[12px] font-bold brutal-border border-[1.5px]">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+              Operations 15%
+            </div>
+</div>
+<!-- SVG Bar & Ceiling Chart -->
+<div class="w-full bg-background rounded-xl p-4 brutal-border border-[2px] flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-label-code text-on-surface-variant px-1">
+<span class="flex items-center gap-1"><span class="w-3 h-0.5 bg-error inline-block"></span> Budget Cap: ₹4,50,000</span>
+<span>Avg Burn: ₹3,92,000/mo</span>
+</div>
+<!-- Custom Clean SVG Chart -->
+<svg class="w-full h-48" fill="none" viewbox="0 0 600 180">
+<!-- Grid Lines -->
+<line stroke="#E4E1E6" stroke-dasharray="4 4" stroke-width="1.5" x1="20" x2="580" y1="30" y2="30"></line>
+<line stroke="#E4E1E6" stroke-dasharray="4 4" stroke-width="1.5" x1="20" x2="580" y1="75" y2="75"></line>
+<line stroke="#E4E1E6" stroke-dasharray="4 4" stroke-width="1.5" x1="20" x2="580" y1="120" y2="120"></line>
+<line stroke="#18181B" stroke-width="2" x1="20" x2="580" y1="155" y2="155"></line>
+<!-- Budget Ceiling Line (Red) -->
+<line stroke="#BA1A1A" stroke-dasharray="6 6" stroke-width="2.5" x1="20" x2="580" y1="40" y2="40"></line>
+<!-- Monthly Bars: Jan to Jul -->
+<!-- Jan (320k) -->
+<rect fill="#C7AAFF" height="85" rx="4" stroke="#18181B" stroke-width="2" width="34" x="40" y="70"></rect>
+<text fill="#4A4453" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="57" y="172">JAN</text>
+<!-- Feb (350k) -->
+<rect fill="#C7AAFF" height="95" rx="4" stroke="#18181B" stroke-width="2" width="34" x="120" y="60"></rect>
+<text fill="#4A4453" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="137" y="172">FEB</text>
+<!-- Mar (380k) -->
+<rect fill="#C7AAFF" height="103" rx="4" stroke="#18181B" stroke-width="2" width="34" x="200" y="52"></rect>
+<text fill="#4A4453" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="217" y="172">MAR</text>
+<!-- Apr (430k) Near Cap -->
+<rect fill="#D3BBFF" height="117" rx="4" stroke="#18181B" stroke-width="2" width="34" x="280" y="38"></rect>
+<text fill="#4A4453" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="297" y="172">APR</text>
+<!-- May (390k) Optimizations applied -->
+<rect fill="#C7AAFF" height="107" rx="4" stroke="#18181B" stroke-width="2" width="34" x="360" y="48"></rect>
+<text fill="#4A4453" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="377" y="172">MAY</text>
+<!-- Jun (402k) -->
+<rect fill="#C7AAFF" height="110" rx="4" stroke="#18181B" stroke-width="2" width="34" x="440" y="45"></rect>
+<text fill="#4A4453" font-family="JetBrains Mono" font-size="11" font-weight="600" text-anchor="middle" x="457" y="172">JUN</text>
+<!-- Current Mo: Jul (412.5k) Highlighted -->
+<rect fill="#5B21B6" height="114" rx="4" stroke="#18181B" stroke-width="2" width="34" x="520" y="41"></rect>
+<text fill="#18181B" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle" x="537" y="172">JUL</text>
+<!-- Indicator tag for current -->
+<g transform="translate(508, 12)">
+<rect fill="#FACC15" height="20" rx="6" stroke="#18181B" stroke-width="1.5" width="58"></rect>
+<text fill="#18181B" font-family="Space Grotesk" font-size="10" font-weight="700" text-anchor="middle" x="29" y="14">₹4.12L</text>
+</g>
+</svg>
+</div>
+</div>
+<!-- Upcoming Renewal Timeline Card -->
+<div class="bg-surface-container-lowest rounded-2xl brutal-border brutal-shadow p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-secondary-fixed text-on-secondary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">notification_important</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Upcoming Renewal Timeline</h3>
+</div>
+<span class="font-label-badge text-label-badge uppercase text-outline">Next 30 Days</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Timeline Item 1: Urgent Adobe -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-error-container/40 brutal-border border-[2px] gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest brutal-border border-[2px] flex items-center justify-center font-headline-sm text-body-md font-bold text-error">
+                  Ps
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Adobe Creative Cloud</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-badge text-[10px] uppercase font-bold brutal-border border-[1.5px]">
+                      Renews Tomorrow!
+                    </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Enterprise Seats • Auto-debit via PayPal • ₹54,000/yr</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm hover:bg-surface-container" data-demo-simulate data-demo-message="Recommendation marked as kept for this review." type="button">
+                  Keep
+                </button>
+<button class="px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm hover:translate-x-[-1px] hover:translate-y-[-1px] brutal-btn" data-demo-simulate data-demo-message="Renegotiation marked for demo review. Use AI Negotiator to generate a vendor-specific draft." type="button">
+                  ⚡ Renegotiate
+                </button>
+</div>
+</div>
+<!-- Timeline Item 2: AWS -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-low brutal-border border-[2px] gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest brutal-border border-[2px] flex items-center justify-center font-headline-sm text-body-md font-bold text-on-surface">
+                  AWS
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Amazon Web Services</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold brutal-border border-[1.5px]">
+                      In 6 Days
+                    </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">EC2 + RDS Reserved instances contract • ₹1,85,000/mo</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm hover:bg-surface-container" data-demo-simulate data-demo-message="Recommendation marked as kept for this review." type="button">
+                  Keep
+                </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm hover:bg-surface-container" data-demo-simulate data-demo-message="Plan adjustment marked for demo review. No vendor account was changed." type="button">
+                  Adjust Plan
+                </button>
+</div>
+</div>
+<!-- Timeline Item 3: Slack -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-low brutal-border border-[2px] gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest brutal-border border-[2px] flex items-center justify-center font-headline-sm text-body-md font-bold text-secondary">
+                  #
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Slack Enterprise Grid</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-[10px] uppercase font-bold brutal-border border-[1.5px]">
+                      In 12 Days
+                    </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">64 members • 4 dormant accounts • ₹38,200/mo</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm" data-demo-simulate data-demo-message="Seat-pruning recommendation marked for demo review. No licenses were changed." type="button">
+                  Prune 4 Seats
+                </button>
+</div>
+</div>
+<!-- Timeline Item 4: HubSpot -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-surface-container-low brutal-border border-[2px] gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest brutal-border border-[2px] flex items-center justify-center font-headline-sm text-body-md font-bold text-on-surface">
+                  HS
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">HubSpot Marketing Hub Pro</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-[10px] uppercase font-bold brutal-border border-[1.5px]">
+                      In 22 Days
+                    </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Annual commitment reset • ₹72,000/mo</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm hover:bg-surface-container" data-placeholder="Recommendation details are not available in this demo yet." type="button">
+                  Details
+                </button>
+<button class="px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm" data-demo-simulate data-demo-message="Renegotiation marked for demo review. Use AI Negotiator to generate a vendor-specific draft." type="button">
+                  ⚡ Renegotiate
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent AI Recommendations Feed -->
+<div class="bg-surface-container-lowest rounded-2xl brutal-border brutal-shadow p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0">
+<div class="flex items-center gap-2">
+<span class="p-1 rounded bg-tertiary-fixed text-on-tertiary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">High-Impact Action Recommendations</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold">2 Quick Wins</span>
+</div>
+<div id="dash-recommendations-container" class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Recommendation 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low brutal-border border-[2px] flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] font-bold brutal-border border-[1px]">
+                    SAVE ₹3,200 / MO
+                  </span>
+<span class="font-label-code text-[11px] text-outline">Zoom Video</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Downgrade 4 Zoom Enterprise licenses to Pro</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">These 4 users host meetings strictly under 35 minutes and haven't utilized transcription or phone dial-in.</p>
+</div>
+<button class="w-full py-2 px-3 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm hover:translate-x-[-1px] hover:translate-y-[-1px] brutal-btn" data-demo-simulate data-demo-message="Zoom downgrade recommendation marked for demo review; no subscription was changed." type="button">
+                Apply 1-Click Downgrade
+              </button>
+</div>
+<!-- Recommendation 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low brutal-border border-[2px] flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] font-bold brutal-border border-[1px]">
+                    SAVE ₹4,500 / MO
+                  </span>
+<span class="font-label-code text-[11px] text-outline">Notion</span>
+</div>
+<h4 class="font-headline-sm text-body-lg font-bold text-on-surface">Cancel unused Notion AI add-on bundle seats</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">9 engineering team members only use local IDE copilot extensions and had 0 Notion AI queries in May/June.</p>
+</div>
+<button class="w-full py-2 px-3 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm hover:bg-surface-container brutal-btn" data-demo-simulate data-demo-message="Notion add-on pruning recommendation marked for demo review; no subscription was changed." type="button">
+                Prune Notion Addons
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: 40% (col-span-5) Embedded Interactive AI Chat Assistant Panel -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg sticky top-20">
+<div class="bg-surface-container-lowest rounded-2xl brutal-border brutal-shadow flex flex-col overflow-hidden">
+<!-- AI Panel Header -->
+<div class="p-space-md bg-primary-fixed brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center brutal-border border-[2px] brutal-shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">SpendPilot Copilot</span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+</div>
+<span class="font-label-code text-[11px] text-on-surface-variant">Context: Acme Technologies • demo snapshot</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button id="dash-chat-clear" class="p-1 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface" title="Clear thread" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+</button>
+<button id="dash-chat-expand" class="p-1 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface" title="Expand panel" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_full</span>
+</button>
+</div>
+</div>
+<!-- Conversational Thread Body -->
+<div id="dash-chat-messages" class="p-space-md flex flex-col gap-4 max-h-[480px] overflow-y-auto bg-surface-container-low/30">
+</div>
+<!-- Quick Suggestion Prompt Chips -->
+<div class="p-space-sm bg-surface-container-low/70 brutal-border border-t-[2px] border-b-[2px] border-l-0 border-r-0 flex flex-col gap-1.5">
+<span class="font-label-badge text-[10px] uppercase text-outline px-1">Suggested Inquiries</span>
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1">
+<button class="quick-chip px-2.5 py-1 rounded-full bg-surface-container-lowest font-body-sm text-[12px] font-semibold text-on-surface brutal-border border-[1.5px] whitespace-nowrap hover:bg-primary-fixed transition-colors" data-query="What are the top 5 SaaS savings opportunities in our dataset? Rank them by annual savings and show the tool, evidence, and amount." type="button">
+  💰 Top 5 savings opportunities
+</button>
+<button class="quick-chip px-2.5 py-1 rounded-full bg-surface-container-lowest font-body-sm text-[12px] font-semibold text-on-surface brutal-border border-[1.5px] whitespace-nowrap hover:bg-primary-fixed transition-colors" data-query="Which subscriptions have inactive ghost seats?" type="button">
+  ✂️ Ghost seats audit
+</button>
+<button class="quick-chip px-2.5 py-1 rounded-full bg-surface-container-lowest font-body-sm text-[12px] font-semibold text-on-surface brutal-border border-[1.5px] whitespace-nowrap hover:bg-primary-fixed transition-colors" data-query="Which subscriptions renew in the next 30 days?" type="button">
+  ⏰ Renewals next 30 days
+</button>
+<button class="quick-chip px-2.5 py-1 rounded-full bg-surface-container-lowest font-body-sm text-[12px] font-semibold text-on-surface brutal-border border-[1.5px] whitespace-nowrap hover:bg-primary-fixed transition-colors" data-query="Which departments have the highest SaaS spend and potential savings in our dataset?" type="button">
+  📊 Department spend analysis
+</button>
+</div>
+</div>
+<!-- Chat Input Section -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col gap-2">
+<div class="relative flex items-center">
+<input id="dash-chat-input" type="text" autocomplete="off" class="w-full pl-3.5 pr-20 py-2.5 bg-background rounded-xl brutal-border border-[2px] text-body-sm font-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest" placeholder="Ask about Acme subscriptions, savings, renewals, or PayPal data…" type="text"/>
+<div class="absolute right-2 flex items-center gap-1">
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface" data-placeholder="File and invoice attachments are not supported in chat yet." title="Attach file or invoice" type="button">
+<span class="material-symbols-outlined text-[18px]">attach_file</span>
+</button>
+<button id="dash-chat-send" type="button" class="p-1.5 rounded-lg bg-primary-container text-on-primary brutal-border border-[1.5px] brutal-shadow-sm brutal-btn" title="Send query" type="button">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-label-code text-outline px-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">lock</span>
+                Confidential CFO Session
+              </span>
+<span>Tokens: 1,420 / 8,000</span>
+</div>
+</div>
+</div>
+<!-- Mini Context Card: Autonomous Contract Watcher -->
+<div class="bg-secondary-fixed/50 rounded-2xl brutal-border brutal-shadow-sm p-4 flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-xl bg-surface-container-lowest brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[22px] text-secondary">security</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Auto-Negotiator Daemon</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Prepared counter-offer for Adobe renewal tomorrow.</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-secondary text-on-secondary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm shrink-0" data-placeholder="There is no draft to review yet. Generate one from AI Negotiator first." type="button">
+            Review Draft
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+  <script src="js/api.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/demo/demo-config.js"></script>
+  <script src="js/demo/demo-controller.js"></script>
+  <script src="js/demo/demo-bootstrap.js"></script>
+</body></html>

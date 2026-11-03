@@ -1,0 +1,1 @@
+"""SpendPilot AI FastAPI backend."""

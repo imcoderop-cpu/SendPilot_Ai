@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.brutal-border{border:3px solid #18181B;}.brutal-shadow{box-shadow:4px 4px 0px #18181B;}.brutal-shadow-sm{box-shadow:2px 2px 0px #18181B;}.brutal-shadow-lg{box-shadow:6px 6px 0px #18181B;}.brutal-btn:active{transform:translate(4px,4px);box-shadow:0px 0px 0px #18181B;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#3bcf95","on-primary-fixed-variant":"#581db3","surface-dim":"#dcd9dd","primary":"#420093","on-tertiary-fixed":"#002113","on-primary":"#ffffff","secondary-container":"#316bf3","surface-bright":"#fbf8fc","surface":"#fbf8fc","secondary-fixed-dim":"#b4c5ff","surface-tint":"#713dcc","inverse-primary":"#d3bbff","tertiary":"#003b26","primary-fixed":"#ebddff","on-tertiary":"#ffffff","inverse-on-surface":"#f3f0f4","on-primary-container":"#c7aaff","primary-container":"#5b21b6","on-secondary-fixed-variant":"#003ea8","surface-container-highest":"#e4e1e6","tertiary-fixed-dim":"#4edea3","surface-container-low":"#f6f2f7","on-secondary-fixed":"#00174b","background":"#fbf8fc","primary-fixed-dim":"#d3bbff","on-error":"#ffffff","secondary-fixed":"#dbe1ff","on-surface":"#1b1b1e","surface-variant":"#e4e1e6","surface-container-high":"#eae7eb","on-surface-variant":"#4a4453","on-secondary-container":"#fefcff","error-container":"#ffdad6","secondary":"#0051d5","on-background":"#1b1b1e","tertiary-container":"#005438","surface-container-lowest":"#ffffff","on-error-container":"#93000a","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#250059","outline":"#7b7485","outline-variant":"#ccc3d6","on-secondary":"#ffffff","surface-container":"#f0edf1","inverse-surface":"#303033"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","gutter-mobile":"1rem","margin":"2.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.25rem"},"fontFamily":{"title-md":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"data-metric":["Space Grotesk"],"label-badge":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"display-hero":["Space Grotesk"]},"fontSize":{"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-code":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"data-metric":["32px",{"lineHeight":"38px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest brutal-border border-r-[3px] border-t-0 border-b-0 border-l-0 z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="flex items-center gap-space-xs mb-space-lg pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0"><img alt="SpendPilot AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgbCFqwL7xfnMvw2rAKaEP0SyadrLmt00wsFaGOg-FjKJBKzc95T6nQzr_KrmFvQ58nAFkUVQT741elIqSF_1cPQH7FJ_k6nRr46kdXGIMQQWwhbRC3-SzklgeAYHOsrx4MCgnO2L6SeXimRo6_j5L8tmImju27QIPTnEN4j0baw_oGxNARM5M6zUBbmJjgP1-oLRMIIxF0zYJQxcWXGtQv9AVX2t2i0N4efOvwWg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SpendPilot</span><div class="mt-1"><span class="inline-block px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] -rotate-1">AI CFO v2.4</span></div></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm"><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="subscriptions" href="#"><span class="material-symbols-outlined text-[20px]">credit_card</span>Subscriptions</a><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-cfo" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span>AI CFO Advisory</a><a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-xl transition-all bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm" data-path="simulator" href="#"><span class="material-symbols-outlined text-[20px]">timeline</span>What-If Simulator</a><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="negotiator" href="#"><span class="material-symbols-outlined text-[20px]">handshake</span>AI Negotiator</a><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="doctor" href="#"><span class="material-symbols-outlined text-[20px]">vital_signs</span>Subscription Doctor</a><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Analytics</a><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">summarize</span>Executive Reports</a></nav></div><div class="p-space-md border-t-[3px] border-on-surface flex flex-col gap-3 bg-surface-container-low"><div class="flex items-center justify-between px-2.5 py-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px]"><div class="flex items-center gap-2"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-container"></span></span><span class="font-label-code text-[11px] text-on-surface font-semibold">PayPal Live Sync</span></div><span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><button aria-label="Theme Switch" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><button aria-label="Notifications" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5 relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full brutal-border border-[1.5px]"></span></button></div><span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">PRO ORG</span></div><div class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-lowest brutal-border brutal-shadow-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover brutal-border border-[2px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwDJBrOAc30VGYQnLgbrVoD1gWm6nR5RLERu1E5J4BvlBwzBPDvN1A2meSN2O4tFkyrCcZpvr6vL292eW9onTjL7tEbTrStoXQ_fwZqbd0Aad4ic8G84GvNCdR5tmzI8_uTASD2D89YwDbTt1JNKkzCsfWD3fgxosIjv9hEAY_FMMmPAp6imao7XMQti-d61VMpz34tjfG3UmkmPx011v7yxG98VdzMNblXFNn2Qc"/><div class="flex flex-col min-w-0 flex-1"><span class="font-headline-sm text-body-sm font-bold text-on-surface truncate">Alex Rivera</span><span class="font-body-sm text-[11px] text-on-surface-variant truncate">CFO / Founder</span></div><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[20px]">unfold_more</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest brutal-border border-b-[3px] border-t-0 border-r-0 border-l-0 z-40 px-6 flex items-center justify-between gap-4"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">auto_awesome</span><input class="w-full pl-9 pr-20 py-1.5 bg-background rounded-full brutal-border border-[2px] text-body-sm font-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest" placeholder="Ask SpendPilot AI or search subscriptions (Cmd + K)..." type="text"/><span class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-code text-[10px] text-on-surface brutal-border border-[1px]">⌘K</span></div></div><div class="flex items-center gap-3 shrink-0"><button class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low brutal-border border-[2px] font-headline-sm text-body-sm text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">business_center</span><span class="font-bold">Acme Technologies</span><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold">Series B</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-sm brutal-border border-[2px]"><span class="material-symbols-outlined text-[16px] text-tertiary-container">sync</span><span class="font-bold text-[12px]">PayPal Synced</span></div><div class="flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-body-sm brutal-border border-[2px]"><span class="material-symbols-outlined text-[16px] text-primary">favorite</span><span class="font-bold text-[12px]">Health: 89/100</span></div><button class="relative p-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute -top-1 -right-1 px-1 rounded-full bg-error text-on-error font-label-badge text-[9px] font-bold brutal-border border-[1.5px]">4 new</span></button><button class="flex items-center rounded-full brutal-border border-[2px]" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwDJBrOAc30VGYQnLgbrVoD1gWm6nR5RLERu1E5J4BvlBwzBPDvN1A2meSN2O4tFkyrCcZpvr6vL292eW9onTjL7tEbTrStoXQ_fwZqbd0Aad4ic8G84GvNCdR5tmzI8_uTASD2D89YwDbTt1JNKkzCsfWD3fgxosIjv9hEAY_FMMmPAp6imao7XMQti-d61VMpz34tjfG3UmkmPx011v7yxG98VdzMNblXFNn2Qc"/></button></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1540px] mx-auto w-full space-y-space-xl">
+<!-- Top Context & Live Runway Extension Bar -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-space-md rounded-2xl bg-surface-container-lowest brutal-border brutal-shadow">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center brutal-border border-[2px]">
+<span class="material-symbols-outlined text-secondary font-bold text-[24px]">model_training</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-title-md text-on-surface">Interactive Financial Model Engine</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[1.5px]">Live Sandbox</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Baseline SaaS Burn: <strong class="text-on-surface">₹7,42,000 / mo</strong> • Current Runway: <strong class="text-on-surface">14.6 Months</strong></p>
+</div>
+</div>
+<div class="flex items-center gap-4 flex-wrap">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-high brutal-border border-[2px]">
+<span class="font-label-code text-[11px] text-on-surface-variant uppercase">Runway Extension:</span>
+<span class="font-headline-sm text-title-md text-tertiary-container font-bold" id="runway-bump-badge">+2.4 Mos</span>
+</div>
+<button class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface font-headline-sm text-body-sm hover:bg-surface-container brutal-border border-[2px] brutal-shadow-sm flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span> History Logs
+        </button>
+</div>
+</div>
+<!-- HERO SIMULATION INTERACTION -->
+<section class="rounded-3xl bg-surface-container-lowest p-6 md:p-10 brutal-border brutal-shadow-lg relative overflow-hidden">
+<!-- Decorative Neo-Brutalist Sticker Accents -->
+<div class="absolute -top-3 -right-3 px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2.5px] rotate-3 brutal-shadow-sm z-10 hidden sm:block">
+        Deterministic Monte Carlo v4
+      </div>
+<div class="max-w-4xl space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low brutal-border border-[2px]">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-label-badge text-label-badge text-on-surface tracking-wider uppercase">Strategic Burn Control</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight tracking-tight">
+          🔮 SaaS Cost &amp; Runway What-If Simulator
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Model strategic cost reductions, license renegotiations, and runway extensions with zero workflow friction.
+        </p>
+</div>
+<!-- Simulator Target Controls -->
+<div class="mt-8 p-6 rounded-2xl bg-surface-container-low brutal-border border-[3px] space-y-6">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+<div class="space-y-1">
+<span class="font-label-code text-body-sm text-on-surface-variant uppercase font-semibold">Simulation Directive</span>
+<div class="flex items-center gap-3">
+<span class="font-headline-sm text-headline-sm text-on-surface">I want to save</span>
+<div class="inline-flex items-center bg-surface-container-lowest px-4 py-2 rounded-xl brutal-border border-[3px] brutal-shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface mr-1">₹</span>
+<input class="w-32 font-headline-sm text-headline-sm text-on-surface font-bold bg-transparent outline-none" id="saving-input" type="text" value="2,00,000"/>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">annually</span>
+</div>
+</div>
+<button class="px-6 py-3.5 rounded-full bg-primary text-on-primary font-headline-sm text-title-md brutal-border border-[3px] brutal-shadow brutal-btn hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 self-start lg:self-auto" id="simulate-btn" type="button">
+<span>Simulate Strategies</span>
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</button>
+</div>
+<!-- Slider Track Component -->
+<div class="space-y-3 pt-2">
+<div class="flex justify-between items-center font-label-code text-body-sm font-bold text-on-surface">
+<span>₹50,000</span>
+<span class="px-3 py-0.5 rounded-full bg-surface-container-highest text-on-surface brutal-border border-[2px]">Target Range: ₹50k - ₹500k</span>
+<span>₹5,00,000</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-4 bg-surface-container-highest rounded-full appearance-none cursor-pointer brutal-border border-[2px] accent-primary" id="saving-slider" max="500000" min="50000" step="10000" type="range" value="200000"/>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-[12px]">
+<span>Low disruption threshold</span>
+<span class="text-primary font-bold">● Current target: ₹<span id="slider-readout">2,00,000</span>/yr</span>
+<span>High department restructuring</span>
+</div>
+</div>
+</div>
+</section>
+<!-- OUTPUT: THREE COMPARATIVE STRATEGY CARDS -->
+<section class="space-y-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Comparative Execution Scenarios</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Three computational roadmaps calibrated for Acme Technologies Series B risk profile.</p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge uppercase brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 100% Deterministic Cash Flow
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+<!-- CARD 1: SAFE STRATEGY -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 brutal-border border-[3px] brutal-shadow flex flex-col justify-between relative group hover:-translate-y-1 transition-transform">
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px]">
+                Low Friction
+              </span>
+<span class="font-label-code text-body-sm font-bold text-tertiary-container">Plan A</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-title-md text-on-surface">Safe Strategy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero disruption to core development and revenue.</p>
+</div>
+<!-- Metric Box -->
+<div class="p-4 rounded-2xl bg-surface-container-low brutal-border border-[2px]">
+<span class="font-label-code text-body-sm text-on-surface-variant uppercase font-semibold">Projected Savings</span>
+<div class="font-data-metric text-data-metric text-tertiary-container mt-1">₹1,24,000 <span class="font-body-sm text-body-sm text-on-surface">/ yr</span></div>
+</div>
+<!-- Granular Metadata Grid -->
+<div class="space-y-2.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Risk Level:</span>
+<span class="font-bold text-tertiary-container flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Very Low (0% Impact)
+                </span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">AI Confidence:</span>
+<span class="font-bold text-on-surface">99%</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Affected Teams:</span>
+<span class="font-semibold text-on-surface">Ops, General IT</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Execution Timeline:</span>
+<span class="font-semibold text-on-surface">Immediate (24 hours)</span>
+</div>
+</div>
+<!-- Action Checklist -->
+<div class="space-y-2">
+<span class="font-label-code text-[11px] uppercase tracking-wider text-on-surface-variant font-bold">Key Actions Required:</span>
+<ul class="space-y-2 font-body-sm text-[13px] text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container shrink-0 mt-0.5">check_box</span>
+<span>Strip 24 idle seats across Datadog &amp; Notion</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container shrink-0 mt-0.5">check_box</span>
+<span>Cancel 2 abandoned test sandbox accounts</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container shrink-0 mt-0.5">check_box</span>
+<span>Switch Figma to annual billing cadence (15% off)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-2 border-surface-container-highest">
+<button class="w-full py-3 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-md brutal-border border-[3px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all flex items-center justify-center gap-2" type="button">
+              Apply Safe Plan <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: BALANCED STRATEGY (CFO AI RECOMMENDED) -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 brutal-border border-[3px] brutal-shadow-lg flex flex-col justify-between relative group -translate-y-2 ring-2 ring-primary/20">
+<!-- Featured Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] brutal-shadow-sm rotate-[-1deg]">
+            ⭐ Recommended by AI CFO
+          </div>
+<div class="space-y-5">
+<div class="flex items-center justify-between pt-1">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px]">
+                Optimal ROI
+              </span>
+<span class="font-label-code text-body-sm font-bold text-primary">Plan B</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-title-md text-on-surface">Balanced Strategy</h3>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] uppercase font-bold">Goal Met</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Precision recalibration without stalling core growth.</p>
+</div>
+<!-- Metric Box -->
+<div class="p-4 rounded-2xl bg-primary-fixed/30 brutal-border border-[2.5px]">
+<div class="flex justify-between items-center">
+<span class="font-label-code text-body-sm text-on-surface-variant uppercase font-semibold">Projected Savings</span>
+<span class="font-label-badge text-[10px] text-primary font-bold">+7.5% Over Goal</span>
+</div>
+<div class="font-data-metric text-data-metric text-primary mt-1">₹2,15,000 <span class="font-body-sm text-body-sm text-on-surface">/ yr</span></div>
+</div>
+<!-- Granular Metadata Grid -->
+<div class="space-y-2.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Risk Level:</span>
+<span class="font-bold text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Low (1.2% Perceived Impact)
+                </span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">AI Confidence:</span>
+<span class="font-bold text-primary">94%</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Affected Teams:</span>
+<span class="font-semibold text-on-surface">Marketing, Sales, Eng</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Execution Timeline:</span>
+<span class="font-semibold text-on-surface">2-3 Weeks</span>
+</div>
+</div>
+<!-- Action Checklist -->
+<div class="space-y-2">
+<span class="font-label-code text-[11px] uppercase tracking-wider text-on-surface-variant font-bold">Key Actions Required:</span>
+<ul class="space-y-2 font-body-sm text-[13px] text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Downgrade Adobe CC to 18 active seats (prune design pool)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Shift Salesforce Enterprise to Performance tier blend</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">check_circle</span>
+<span>Renegotiate AWS Reserved Instances with Pilot script</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-2 border-surface-container-highest">
+<button class="w-full py-3.5 rounded-full bg-primary text-on-primary font-headline-sm text-body-md brutal-border border-[3px] brutal-shadow brutal-btn hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2" type="button">
+<span>Deploy Balanced Plan</span>
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</button>
+</div>
+</div>
+<!-- CARD 3: AGGRESSIVE STRATEGY -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 brutal-border border-[3px] brutal-shadow flex flex-col justify-between relative group hover:-translate-y-1 transition-transform">
+<div class="space-y-5">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px]">
+                Max Preservation
+              </span>
+<span class="font-label-code text-body-sm font-bold text-error">Plan C</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-title-md text-on-surface">Aggressive Strategy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maximum cash conservation for Series C bridge safety.</p>
+</div>
+<!-- Metric Box -->
+<div class="p-4 rounded-2xl bg-surface-container-low brutal-border border-[2px]">
+<span class="font-label-code text-body-sm text-on-surface-variant uppercase font-semibold">Projected Savings</span>
+<div class="font-data-metric text-data-metric text-error mt-1">₹3,45,000 <span class="font-body-sm text-body-sm text-on-surface">/ yr</span></div>
+</div>
+<!-- Granular Metadata Grid -->
+<div class="space-y-2.5 font-body-sm text-body-sm">
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Risk Level:</span>
+<span class="font-bold text-error flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Moderate (Tool Migration)
+                </span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">AI Confidence:</span>
+<span class="font-bold text-on-surface">87%</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Affected Teams:</span>
+<span class="font-semibold text-on-surface">All Departments</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b-2 border-surface-container-highest">
+<span class="text-on-surface-variant">Execution Timeline:</span>
+<span class="font-semibold text-on-surface">30-45 Days</span>
+</div>
+</div>
+<!-- Action Checklist -->
+<div class="space-y-2">
+<span class="font-label-code text-[11px] uppercase tracking-wider text-on-surface-variant font-bold">Key Actions Required:</span>
+<ul class="space-y-2 font-body-sm text-[13px] text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">change_circle</span>
+<span>Consolidate Slack workspaces into existing MS Teams</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">change_circle</span>
+<span>Replace proprietary APM with open-source Grafana stack</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">change_circle</span>
+<span>Hard renegotiate all top 5 enterprise vendors concurrently</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-6 mt-6 border-t-2 border-surface-container-highest">
+<button class="w-full py-3 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-md brutal-border border-[3px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all flex items-center justify-center gap-2" type="button">
+              Review Aggressive Plan <span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- BOTTOM SECTION: AI NEGOTIATOR & EMAIL DRAFTER PREVIEW -->
+<section class="space-y-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">🤖 AI Vendor Contract Negotiator</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px]">Autonomous Agent</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Live contract benchmarking against 12,000+ anonymous B2B SaaS invoices.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-body-sm text-on-surface-variant">Negotiator Status:</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-sm brutal-border border-[2px] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span> Ready to Dispatch
+          </span>
+</div>
+</div>
+<!-- Split Card Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- Left Intelligence Column (5 cols) -->
+<div class="xl:col-span-5 rounded-3xl bg-surface-container-lowest p-6 brutal-border border-[3px] brutal-shadow space-y-6">
+<div class="space-y-3">
+<label class="font-label-code text-body-sm uppercase tracking-wider text-on-surface-variant font-bold block">Selected Vendor Contract</label>
+<div class="relative">
+<select class="w-full appearance-none p-3.5 pr-10 rounded-2xl bg-surface-container-low font-headline-sm text-body-md text-on-surface brutal-border border-[2px] outline-none cursor-pointer">
+<option selected="">Salesforce Enterprise Renewal (45 Days Remaining)</option>
+<option>AWS Enterprise Support &amp; EC2 Commit (60 Days)</option>
+<option>Datadog Pro Annual Ingestion Tier (18 Days)</option>
+<option>HubSpot Marketing Hub Enterprise (90 Days)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface">expand_more</span>
+</div>
+</div>
+<!-- Contract Profile Pill Grid -->
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 rounded-2xl bg-surface-container-low brutal-border border-[2px]">
+<span class="font-label-code text-[11px] text-on-surface-variant block uppercase">Current Burn</span>
+<span class="font-headline-sm text-title-md text-on-surface font-bold">₹1,45,000 / mo</span>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container-low brutal-border border-[2px]">
+<span class="font-label-code text-[11px] text-on-surface-variant block uppercase">Renewal Window</span>
+<span class="font-headline-sm text-title-md text-error font-bold">45 Days Left</span>
+</div>
+</div>
+<!-- Benchmark Intelligence Card -->
+<div class="p-5 rounded-2xl bg-surface-container-high brutal-border border-[2px] space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">insights</span>
+<span class="font-headline-sm text-body-md text-on-surface font-bold">SpendPilot Market Intelligence</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+              Based on 48 comparable Series B fintech teams, Acme qualifies for a <strong class="text-secondary">Tier-2 Startup Volume Discount of 22%</strong> on Salesforce seats, provided a 2-year prepayment is structured.
+            </p>
+<div class="flex items-center justify-between pt-2 border-t-2 border-surface-container-highest text-body-sm">
+<span class="text-on-surface-variant">Target Target Savings:</span>
+<span class="font-headline-sm text-body-md text-tertiary-container font-bold">₹31,900 / mo (₹3,82,800/yr)</span>
+</div>
+</div>
+<!-- Negotiation Strategy Levers -->
+<div class="space-y-2">
+<span class="font-label-code text-[11px] uppercase tracking-wider text-on-surface-variant font-bold">Applied Leverage Tactics:</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-badge text-label-badge brutal-border border-[1.5px]">HubSpot Migration Threat</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-badge text-label-badge brutal-border border-[1.5px]">Quarter-End Quota Timing</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-label-badge text-label-badge brutal-border border-[1.5px]">24-Month Term Commitment</span>
+</div>
+</div>
+</div>
+<!-- Right Gmail-Style Interactive Drafter (7 cols) -->
+<div class="xl:col-span-7 rounded-3xl bg-surface-container-lowest brutal-border border-[3px] brutal-shadow flex flex-col overflow-hidden">
+<!-- Gmail-like Client Header Bar -->
+<div class="p-4 bg-surface-container-high brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error brutal-border border-[1px]"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-fixed brutal-border border-[1px]"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed brutal-border border-[1px]"></span>
+</div>
+<span class="font-headline-sm text-body-sm font-bold text-on-surface">Autonomous Email Composer (AI CFO Persona)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-[11px] px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface brutal-border border-[1px]">Draft Saved</span>
+</div>
+</div>
+<!-- Draft Addressing Form -->
+<div class="p-5 space-y-3 bg-surface-container-lowest border-b-2 border-surface-container-highest">
+<div class="flex items-center gap-2 font-body-sm text-body-sm">
+<span class="text-on-surface-variant w-16 font-semibold">To:</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface brutal-border border-[1px] font-label-code text-[12px]">renewals-apac@salesforce.com</span>
+<span class="text-on-surface-variant text-[12px]">(Account Exec: Sarah Jenkins)</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm">
+<span class="text-on-surface-variant w-16 font-semibold">Subject:</span>
+<input class="flex-1 font-headline-sm text-body-md text-on-surface bg-transparent outline-none font-bold" readonly="" type="text" value="Acme Tech &lt;&gt; Salesforce: Renewal Terms &amp; Multi-Year Tier Review"/>
+</div>
+</div>
+<!-- Draft Body Area -->
+<div class="p-6 space-y-4 font-body-md text-body-md text-on-surface leading-relaxed flex-1">
+<p>Hi Sarah,</p>
+<p>As we approach our annual renewal window for Acme Technologies (currently 45 days out), our finance committee has initiated a comprehensive audit of all tier-1 software commitments alongside our current growth pacing.</p>
+<div class="p-3.5 rounded-xl bg-surface-container-low brutal-border border-[2px] font-body-sm text-[13px] space-y-1">
+<p class="font-bold text-on-surface">Key Renewal Assessment Items:</p>
+<ul class="list-disc pl-5 space-y-1 text-on-surface-variant">
+<li>Current Seat Count: 85 Enterprise Seats (utilization verified at 71%).</li>
+<li>Benchmark Parity: Peer-tier companies within our series bracket are currently contracted at <strong>₹1,13,000 / mo</strong> for comparable volume.</li>
+<li>Expansion Option: We are open to committing to a <strong>24-month structured renewal</strong> if volume pricing aligns.</li>
+</ul>
+</div>
+<p>We are concurrently evaluating alternative workflows across HubSpot CRM to consolidate our sales pipeline. Could you share revised rate-card options reflecting the 22% volume discount tier before our quarterly board review this Thursday?</p>
+<p class="pt-2">Best regards,<br/>
+<strong class="font-headline-sm text-body-md text-on-surface">Alex Rivera</strong><br/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">CFO, Acme Technologies (via SpendPilot Autonomous Ops)</span></p>
+</div>
+<!-- Bottom Action Buttons Toolbar -->
+<div class="p-4 bg-surface-container-low border-t-2 border-surface-container-highest flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all flex items-center justify-center gap-2" id="copy-email-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span id="copy-text">Copy Email Draft</span>
+</button>
+<button class="flex-1 sm:flex-none px-4 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Brief</span>
+</button>
+</div>
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-primary text-on-primary font-headline-sm text-body-sm brutal-border border-[3px] brutal-shadow-sm brutal-btn hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Send via Connected Gmail</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Simple interactive sync between slider & input
+  const slider = document.getElementById('saving-slider');
+  const input = document.getElementById('saving-input');
+  const readout = document.getElementById('slider-readout');
+  const runwayBadge = document.getElementById('runway-bump-badge');
+  const simulateBtn = document.getElementById('simulate-btn');
+  const copyBtn = document.getElementById('copy-email-btn');
+  const copyText = document.getElementById('copy-text');
+
+  function formatCurrency(val) {
+    return Number(val).toLocaleString('en-IN');
+  }
+
+  function updateValues(val) {
+    input.value = formatCurrency(val);
+    readout.innerText = formatCurrency(val);
+    
+    // Dynamically recalculate estimated runway bump
+    const num = Number(val);
+    const months = (num / 85000).toFixed(1);
+    runwayBadge.innerText = `+${months} Mos`;
+  }
+
+  if (slider && input && readout) {
+    slider.addEventListener('input', (e) => {
+      updateValues(e.target.value);
+    });
+
+    input.addEventListener('change', (e) => {
+      const cleanVal = e.target.value.replace(/[^0-9]/g, '');
+      if (cleanVal) {
+        slider.value = cleanVal;
+        updateValues(cleanVal);
+      }
+    });
+
+    simulateBtn.addEventListener('click', () => {
+      simulateBtn.classList.add('bg-secondary');
+      simulateBtn.innerText = 'Calculating... ⚡';
+      setTimeout(() => {
+        simulateBtn.classList.remove('bg-secondary');
+        simulateBtn.innerHTML = '<span>Simulate Strategies</span><span class="material-symbols-outlined text-[22px]">bolt</span>';
+      }, 500);
+    });
+  }
+
+  if (copyBtn && copyText) {
+    copyBtn.addEventListener('click', () => {
+      copyText.innerText = 'Copied to Clipboard! ✓';
+      setTimeout(() => {
+        copyText.innerText = 'Copy Email Draft';
+      }, 2000);
+    });
+  }
+</script></main></div></body></html>

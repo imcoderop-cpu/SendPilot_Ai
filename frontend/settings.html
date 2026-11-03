@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.brutal-border{border:3px solid #18181B;}.brutal-shadow{box-shadow:4px 4px 0px #18181B;}.brutal-shadow-sm{box-shadow:2px 2px 0px #18181B;}.brutal-shadow-lg{box-shadow:6px 6px 0px #18181B;}.brutal-btn:active{transform:translate(4px,4px);box-shadow:0px 0px 0px #18181B;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error":"#ba1a1a","on-tertiary-fixed-variant":"#005236","on-tertiary-container":"#3bcf95","on-primary-fixed-variant":"#581db3","surface-dim":"#dcd9dd","primary":"#420093","on-tertiary-fixed":"#002113","on-primary":"#ffffff","secondary-container":"#316bf3","surface-bright":"#fbf8fc","surface":"#fbf8fc","secondary-fixed-dim":"#b4c5ff","surface-tint":"#713dcc","inverse-primary":"#d3bbff","tertiary":"#003b26","primary-fixed":"#ebddff","on-tertiary":"#ffffff","inverse-on-surface":"#f3f0f4","on-primary-container":"#c7aaff","primary-container":"#5b21b6","on-secondary-fixed-variant":"#003ea8","surface-container-highest":"#e4e1e6","tertiary-fixed-dim":"#4edea3","surface-container-low":"#f6f2f7","on-secondary-fixed":"#00174b","background":"#fbf8fc","primary-fixed-dim":"#d3bbff","on-error":"#ffffff","secondary-fixed":"#dbe1ff","on-surface":"#1b1b1e","surface-variant":"#e4e1e6","surface-container-high":"#eae7eb","on-surface-variant":"#4a4453","on-secondary-container":"#fefcff","error-container":"#ffdad6","secondary":"#0051d5","on-background":"#1b1b1e","tertiary-container":"#005438","surface-container-lowest":"#ffffff","on-error-container":"#93000a","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#250059","outline":"#7b7485","outline-variant":"#ccc3d6","on-secondary":"#ffffff","surface-container":"#f0edf1","inverse-surface":"#303033"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","gutter-mobile":"1rem","margin":"2.5rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2.25rem"},"fontFamily":{"title-md":["Plus Jakarta Sans"],"headline-lg":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"label-code":["JetBrains Mono"],"data-metric":["Space Grotesk"],"label-badge":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"display-hero":["Space Grotesk"]},"fontSize":{"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-code":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"data-metric":["32px",{"lineHeight":"38px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest brutal-border border-r-[3px] border-t-0 border-b-0 border-l-0 z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="flex items-center gap-2 mb-space-lg pb-space-sm brutal-border border-b-[3px] border-t-0 border-l-0 border-r-0"><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-[22px] font-bold text-on-surface tracking-tight leading-none">SpendPilot</span><span class="font-headline-sm text-[22px] font-bold text-primary tracking-tight leading-none">AI</span></div><div class="mt-1"><span class="inline-block px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] -rotate-1">AI CFO v2.4</span></div></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm"><a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span>Dashboard</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="subscriptions" href="subscriptions.html"><span class="material-symbols-outlined text-[20px]">credit_card</span>Subscriptions</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-cfo" href="ai_cfo.html"><span class="material-symbols-outlined text-[20px]">smart_toy</span>AI CFO Advisory</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="simulator" href="simulator.html"><span class="material-symbols-outlined text-[20px]">timeline</span>What-If Simulator</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="negotiator" href="negotiator.html"><span class="material-symbols-outlined text-[20px]">handshake</span>AI Negotiator</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="paypal" href="paypal.html"><span class="material-symbols-outlined text-[20px]">payments</span>PayPal Ledger</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="doctor" href="doctor.html"><span class="material-symbols-outlined text-[20px]">vital_signs</span>Subscription Doctor</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics" href="analytics.html"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Analytics</a>
+<a class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-on-surface-variant font-headline-sm text-body-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="reports.html"><span class="material-symbols-outlined text-[20px]">summarize</span>Executive Reports</a>
+<a aria-current="page" class="flex items-center gap-2.5 px-3 py-2 rounded-xl transition-all bg-primary-container text-on-primary font-bold brutal-border brutal-shadow-sm" data-path="settings" href="settings.html"><span class="material-symbols-outlined text-[20px]">settings</span>Company Settings</a></nav></div><div class="p-space-md border-t-[3px] border-on-surface flex flex-col gap-3 bg-surface-container-low"><div id="sidebar-paypal-sync" data-action="open-paypal" class="flex items-center justify-between px-2.5 py-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] cursor-pointer hover:bg-surface-container transition-all"><div class="flex items-center gap-2"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-container"></span></span><span class="font-label-code text-[11px] text-on-surface font-semibold">PayPal Live Sync</span></div><span class="material-symbols-outlined text-[16px] text-tertiary-container">check_circle</span></div><div class="flex items-center justify-between px-1"><div class="flex items-center gap-2"><button id="theme-switch-btn" data-action="toggle-theme" aria-label="Theme Switch" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5" type="button"><span class="material-symbols-outlined text-[18px]">light_mode</span></button><button id="sidebar-notif-btn" data-action="open-notifications" aria-label="Notifications" class="p-1.5 rounded-lg bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface transition-transform active:translate-y-0.5 relative" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span><span id="sidebar-notif-dot" class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full brutal-border border-[1.5px]"></span></button></div><span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">PRO ORG</span></div><div id="sidebar-profile-card" data-action="open-profile" class="flex items-center gap-2.5 p-2 rounded-xl bg-surface-container-lowest brutal-border brutal-shadow-sm cursor-pointer hover:bg-surface-container transition-all"><div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div><div class="flex flex-col min-w-0 flex-1"><span class="font-headline-sm text-body-sm font-bold text-on-surface truncate"><span data-user-name>Alex Rivera</span><span class="font-body-sm text-[11px] text-on-surface-variant truncate"><span data-user-role>CFO / Founder</span></div><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[20px]">unfold_more</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest brutal-border border-b-[3px] border-t-0 border-r-0 border-l-0 z-40 px-6 flex items-center justify-between gap-4"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">auto_awesome</span><input id="global-omnibar-input" data-action="open-command-palette" class="w-full pl-9 pr-20 py-1.5 bg-background rounded-full brutal-border border-[2px] text-body-sm font-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest cursor-pointer" placeholder="Ask SpendPilot AI or search subscriptions (Cmd + K)..." type="text" readonly><span class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-highest font-label-code text-[10px] text-on-surface brutal-border border-[1px]">⌘K</span></div></div><div class="flex items-center gap-3 shrink-0"><button id="header-org-btn" data-action="open-org-switcher" class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low brutal-border border-[2px] font-headline-sm text-body-sm text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px] text-secondary">business_center</span><span class="font-bold">Acme Technologies</span><span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold" data-company-tier>Series B</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button><div id="header-paypal-sync" data-action="open-paypal" class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-body-sm brutal-border border-[2px] cursor-pointer hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[16px] text-tertiary-container">sync</span><span class="font-bold text-[12px]">PayPal Synced</span></div><div class="flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-headline-sm text-body-sm brutal-border border-[2px]"><span class="material-symbols-outlined text-[16px] text-primary">favorite</span><span class="font-bold text-[12px]" data-health-score>Health: 89/100</span></div><button id="header-notif-btn" data-action="open-notifications" aria-label="Notifications" class="relative p-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] hover:bg-surface text-on-surface hover:scale-105 transition-transform" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span id="header-notif-dot" class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-error rounded-full brutal-border border-[1.5px]"></span></button><button aria-label="User profile settings" class="flex items-center rounded-full brutal-border border-[2px]" type="button"><div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div></button></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-md md:p-margin flex flex-col gap-space-lg max-w-[1540px] mx-auto w-full">
+<!-- Top Action / Header Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md p-space-lg rounded-[20px] bg-surface-container-lowest brutal-border brutal-shadow">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center px-3 py-0.5 rounded-full bg-primary-container text-on-primary font-label-badge text-label-badge uppercase tracking-wider brutal-border border-[2px] -rotate-1">
+            WORKSPACE ADMIN
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-code text-[11px] font-bold brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[14px]">domain</span>
+            ORG_ID: ACM-7829-PRO
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+          Organization Settings &amp; Integrations
+        </h1>
+<p class="font-body-lg text-body-md text-on-surface-variant max-w-3xl">
+          Manage the demo organization profile, review sandbox data, and explore governance controls.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 flex-wrap">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all flex items-center gap-2" data-placeholder="Resetting unsaved settings is not connected yet; no settings were changed." id="discardBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+          Reset Unsaved
+        </button>
+<button class="px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-body-sm font-bold brutal-border brutal-shadow-sm brutal-btn hover:opacity-95 transition-all flex items-center gap-2" data-placeholder="Saving governance settings is not connected yet; changes will not persist." id="saveGovernanceBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+          Save Governance Profile
+        </button>
+</div>
+</div>
+<!-- Main Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Profile, AI Controls & Data Pipelines (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Module 1: Company Profile & Financial Metadata -->
+<section class="rounded-[20px] bg-surface-container-lowest brutal-border brutal-shadow flex flex-col overflow-hidden">
+<div class="p-space-md border-b-[3px] border-on-surface bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</span>
+<h2 class="font-headline-md text-headline-sm text-on-surface">Company Profile &amp; Financial Metadata</h2>
+</div>
+<span class="font-label-badge text-label-badge bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-full brutal-border border-[2px] uppercase">
+              Demo Entity
+            </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-body-sm text-on-surface font-bold uppercase tracking-wider">Business Legal Name</label>
+<input id="settings-company-name" class="w-full px-3.5 py-2.5 rounded-[14px] bg-background font-body-md text-on-surface brutal-border border-[2px] focus:outline-none focus:bg-surface-container-lowest brutal-shadow-sm font-semibold" type="text" value="Acme Technologies"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-body-sm text-on-surface font-bold uppercase tracking-wider">Industry &amp; Stage</label>
+<div class="relative">
+<select id="settings-company-industry" class="w-full appearance-none px-3.5 py-2.5 rounded-[14px] bg-background font-body-md text-on-surface brutal-border border-[2px] focus:outline-none brutal-shadow-sm font-semibold pr-9">
+<option selected="">Software / SaaS</option>
+<option>Consumer FinTech (Series A)</option>
+<option>Cloud Infrastructure (Seed)</option>
+<option>HealthTech Growth (Series C)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[20px] text-on-surface">unfold_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-body-sm text-on-surface font-bold uppercase tracking-wider">Workforce Size</label>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-[14px] bg-background brutal-border border-[2px] brutal-shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+<input id="settings-employee-count" class="w-full bg-transparent font-body-md text-on-surface font-semibold focus:outline-none" type="text" value="250 Employees"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-body-sm text-on-surface font-bold uppercase tracking-wider">Operational HQ</label>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-[14px] bg-background brutal-border border-[2px] brutal-shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">location_on</span>
+<input id="settings-company-country" class="w-full bg-transparent font-body-md text-on-surface font-semibold focus:outline-none" type="text" value="India"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-body-sm text-on-surface font-bold uppercase tracking-wider">Fiscal Cadence</label>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-[14px] bg-background brutal-border border-[2px] brutal-shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span>
+<span class="font-body-md font-semibold text-on-surface text-[13px] truncate">Apr 1 – Mar 31</span>
+</div>
+</div>
+</div>
+<!-- Currency Split Row -->
+<div class="p-space-md rounded-[16px] bg-surface-container border-[2px] border-on-surface flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Dual-Currency Normalization</span>
+<span class="font-body-sm text-on-surface-variant">Demo amounts are displayed in INR; live foreign-exchange conversion is not connected.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest font-label-code text-label-code text-on-surface font-bold brutal-border border-[2px]">
+                  PRIMARY: INR (₹)
+                </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest font-label-code text-label-code text-on-surface font-bold brutal-border border-[2px]">
+                  COUNTRY: INDIA
+                </span>
+</div>
+</div>
+<!-- Runway Goal Metric Widget -->
+<div class="p-space-md rounded-[16px] bg-surface-container-low brutal-border border-[2px] flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-outline font-bold">Current Runway Preservation Goal</span>
+<span class="font-label-code text-label-code text-tertiary-container font-bold bg-tertiary-fixed px-2 py-0.5 rounded-full border-[1.5px] border-on-surface">Target Met: 21.4 Mos</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="font-data-metric text-headline-md text-on-surface font-bold">&gt;18 Months Liquidity Buffer</div>
+<span class="font-body-sm text-on-surface-variant font-semibold">Active reserve: ₹14.82 Cr</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest brutal-border border-[2px] overflow-hidden">
+<div class="h-full bg-tertiary-container w-[78%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Module 2: AI CFO Autonomous Action Preferences -->
+<section class="rounded-[20px] bg-surface-container-lowest brutal-border brutal-shadow flex flex-col overflow-hidden">
+<div class="p-space-md border-b-[3px] border-on-surface bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</span>
+<h2 class="font-headline-md text-headline-sm text-on-surface">AI CFO &amp; Autonomous Action Preferences</h2>
+</div>
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-full brutal-border border-[2px] uppercase">
+              AGENT LEVEL 3
+            </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Preference Item 1 -->
+<div class="p-space-md rounded-[16px] bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1 max-w-md">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Autonomous Email Drafter</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] uppercase font-bold border-[1.5px] border-on-surface">Enabled</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Generates discount retention letters with vendors. Requires 1-click human confirmation before outbound transmission.</p>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all" data-placeholder="Custom AI prompt configuration is not available in this demo yet." type="button">
+                  Configure Prompts
+                </button>
+</div>
+</div>
+<!-- Preference Item 2 -->
+<div class="p-space-md rounded-[16px] bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1 max-w-md">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Automatic Seat Pruning Threshold</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold border-[1.5px] border-on-surface">Active</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Flags and triggers license reclaim requests when assigned employee has no single sign-on activity.</p>
+</div>
+<div class="shrink-0">
+<div class="relative inline-block">
+<select class="appearance-none px-4 py-1.5 rounded-full bg-background font-label-code text-body-sm text-on-surface font-bold brutal-border border-[2px] brutal-shadow-sm pr-8 focus:outline-none">
+<option>After 30 Days Idle</option>
+<option selected="">After 45 Days Idle</option>
+<option>After 60 Days Idle</option>
+<option>Manual Review Only</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2 text-[16px] text-on-surface">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Preference Item 3 -->
+<div class="p-space-md rounded-[16px] bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1 max-w-md">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Anomaly Alert Sensitivity</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-badge text-[10px] uppercase font-bold border-[1.5px] border-on-surface">High Sensitivity</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Instant trigger when any recurring SaaS billing invoices exceed expected baseline threshold.</p>
+</div>
+<div class="shrink-0">
+<div class="relative inline-block">
+<select class="appearance-none px-4 py-1.5 rounded-full bg-background font-label-code text-body-sm text-on-surface font-bold brutal-border border-[2px] brutal-shadow-sm pr-8 focus:outline-none">
+<option selected="">&gt;10% Spike (Immediate Ping)</option>
+<option>&gt;20% Spike (Moderate)</option>
+<option>&gt;35% Spike (Conservative)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2 text-[16px] text-on-surface">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Preference Item 4 -->
+<div class="p-space-md rounded-[16px] bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1 max-w-md">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Negotiation Aggressiveness Style</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-badge text-[10px] uppercase font-bold border-[1.5px] border-on-surface">Tactical</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Dictates tone for vendor counter-offers, tenure leverage, and contract multi-year term negotiations.</p>
+</div>
+<div class="shrink-0">
+<div class="relative inline-block">
+<select class="appearance-none px-4 py-1.5 rounded-full bg-background font-label-code text-body-sm text-on-surface font-bold brutal-border border-[2px] brutal-shadow-sm pr-8 focus:outline-none">
+<option>Conservative (Maintain Relationships)</option>
+<option selected="">Balanced (Multi-Year Discounts)</option>
+<option>Aggressive (Max Immediate Cost Cuts)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-2 text-[16px] text-on-surface">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Module 3: Connected Services & Data Pipelines -->
+<section class="rounded-[20px] bg-surface-container-lowest brutal-border brutal-shadow flex flex-col overflow-hidden">
+<div class="p-space-md border-b-[3px] border-on-surface bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</span>
+<h2 class="font-headline-md text-headline-sm text-on-surface">Integration Status &amp; Data Pipelines</h2>
+</div>
+<span class="font-label-badge text-label-badge bg-surface-container-lowest text-on-surface px-2.5 py-1 rounded-full brutal-border border-[2px] uppercase">
+              1 demo dataset · 3 integrations unavailable
+            </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Pipeline 1: PayPal Sandbox Snapshot -->
+<div class="p-space-md rounded-[16px] bg-tertiary-fixed/20 brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest brutal-border border-[2px] text-secondary">
+<span class="material-symbols-outlined text-[26px]">payments</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">PayPal Sandbox Dataset</span>
+<span id="settings-sync-status" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] uppercase font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> Sandbox Demo Data
+                    </span>
+</div>
+<div class="font-body-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span id="settings-vendor-count">55 vendors in snapshot</span>
+<span>•</span>
+<span id="settings-last-sync" class="font-label-code text-[11px]">Dataset as of 1 Nov 2026</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-4 py-1.5 rounded-full bg-tertiary-container text-on-tertiary font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:opacity-90 transition-all flex items-center gap-1.5" id="syncNowBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span id="syncText">Sync Now</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container-lowest brutal-border border-[2px] text-on-surface hover:bg-surface-container" data-placeholder="PayPal connection settings are not available in this demo yet." title="Connection Settings" type="button">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+</div>
+<!-- Pipeline 2: Plaid Banking Gateway -->
+<div class="p-space-md rounded-[16px] bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest brutal-border border-[2px] text-primary">
+<span class="material-symbols-outlined text-[26px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Corporate Banking / Plaid Gateway</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] uppercase font-bold border-[1.5px] border-on-surface">Demo only</span>
+</div>
+<span class="font-body-sm text-on-surface-variant mt-0.5">Bank and Plaid connections are not configured in this demo.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-label-code text-[11px] text-on-surface-variant font-semibold">TLS 1.3 Strict</span>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all" data-placeholder="Managing the integration requires a live provider connection, which is not configured in this demo." type="button">
+                  Manage
+                </button>
+</div>
+</div>
+<!-- Pipeline 3: Google Workspace SSO -->
+<div class="p-space-md rounded-[16px] bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest brutal-border border-[2px] text-error">
+<span class="material-symbols-outlined text-[26px]">security</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Google Workspace SSO Directory</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] uppercase font-bold border-[1.5px] border-on-surface">85 Accounts Synced</span>
+</div>
+<span class="font-body-sm text-on-surface-variant mt-0.5">Automated provisioning and de-provisioning listener on @acme.io</span>
+</div>
+</div>
+<div class="shrink-0">
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all" data-placeholder="Directory audit logs are not connected in this demo." type="button">
+                  Directory Logs
+                </button>
+</div>
+</div>
+<!-- Pipeline 4: OpenAI API Engine -->
+<div class="p-space-md rounded-[16px] bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest brutal-border border-[2px] text-primary">
+<span class="material-symbols-outlined text-[26px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">OpenAI Dedicated Inference Token</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] uppercase font-bold border-[1.5px] border-on-surface">Dedicated v4.2</span>
+</div>
+<span class="font-body-sm text-on-surface-variant mt-0.5 font-label-code text-[12px]">Token: sk-sp-cfo-9988••••••••••••••</span>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container" data-placeholder="API key rotation is not available in the static demo." type="button">
+                  Rotate Key
+                </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Governance, Team Members & Security (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Notification & Alert Routing -->
+<section class="rounded-[20px] bg-surface-container-lowest brutal-border brutal-shadow flex flex-col overflow-hidden">
+<div class="p-space-md border-b-[3px] border-on-surface bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</span>
+<h2 class="font-headline-md text-headline-sm text-on-surface">Notification &amp; Alert Routing</h2>
+</div>
+<span class="font-label-badge text-label-badge bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded-full brutal-border border-[2px] uppercase">
+              REAL-TIME
+            </span>
+</div>
+<div class="p-space-md flex flex-col gap-3">
+<!-- Switch 1 -->
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer border-[2px] border-on-surface">
+<div class="flex flex-col pr-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Renewal Warnings Escalation</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">Automated alerts at 7-day, 3-day, and 24-hr milestones.</span>
+</div>
+<input checked="" class="w-6 h-6 accent-primary-container brutal-border rounded cursor-pointer shrink-0" type="checkbox"/>
+</label>
+<!-- Switch 2 -->
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer border-[2px] border-on-surface">
+<div class="flex flex-col pr-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Phantom License Alarms</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">Notify when recurring seats exist with no assigned email SSO.</span>
+</div>
+<input checked="" class="w-6 h-6 accent-primary-container brutal-border rounded cursor-pointer shrink-0" type="checkbox"/>
+</label>
+<!-- Switch 3 -->
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer border-[2px] border-on-surface">
+<div class="flex flex-col pr-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Budget Overrun Anomaly Dispatch</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">Direct Slack webhook trigger to #exec-finance room.</span>
+</div>
+<input checked="" class="w-6 h-6 accent-primary-container brutal-border rounded cursor-pointer shrink-0" type="checkbox"/>
+</label>
+<!-- Switch 4 -->
+<label class="flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer border-[2px] border-on-surface">
+<div class="flex flex-col pr-2">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Weekly Board Executive PDF</span>
+<span class="font-body-sm text-on-surface-variant text-[12px]">Delivered Mondays at 08:00 AM IST to all Org Super Admins.</span>
+</div>
+<input class="w-6 h-6 accent-primary-container brutal-border rounded cursor-pointer shrink-0" type="checkbox"/>
+</label>
+</div>
+</section>
+<!-- Organization Members & Permissions -->
+<section class="rounded-[20px] bg-surface-container-lowest brutal-border brutal-shadow flex flex-col overflow-hidden">
+<div class="p-space-md border-b-[3px] border-on-surface bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+</span>
+<h2 class="font-headline-md text-headline-sm text-on-surface">Members &amp; Permissions</h2>
+</div>
+<span class="font-label-code text-label-code text-on-surface font-bold bg-surface-container px-2 py-0.5 rounded-full border-[1.5px] border-on-surface">
+              4 Active Seats
+            </span>
+</div>
+<div class="p-space-md flex flex-col gap-3">
+<!-- Member 1: Alex Rivera -->
+<div class="p-3 rounded-xl bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate"><span data-user-name>Alex Rivera</span>
+<span class="px-1.5 py-0.2 bg-primary-fixed text-on-primary-fixed font-label-badge text-[9px] font-bold rounded brutal-border border-[1px]">YOU</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">alex@acme.io • CFO &amp; Founder</span>
+</div>
+</div>
+<div class="shrink-0">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-label-badge text-label-badge uppercase font-bold brutal-border border-[1.5px]">
+                  SUPER ADMIN
+                </span>
+</div>
+</div>
+<!-- Member 2: Priya Sharma -->
+<div class="p-3 rounded-xl bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">Priya Sharma</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">priya.sharma@acme.io • VP Finance</span>
+</div>
+</div>
+<div class="shrink-0">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase font-bold brutal-border border-[1.5px]">
+                  ADMIN
+                </span>
+</div>
+</div>
+<!-- Member 3: Marcus Chen -->
+<div class="p-3 rounded-xl bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-body-sm brutal-border border-[2px]" overflow-hidden><img src="assets/pfp.jpg" alt="Alex Rivera" class="w-full h-full object-cover" onerror="this.parentElement.textContent='AR'"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">Marcus Chen</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">marcus@acme.io • Head of Eng</span>
+</div>
+</div>
+<div class="shrink-0">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge uppercase font-bold brutal-border border-[1.5px]">
+                  APPROVER
+                </span>
+</div>
+</div>
+<!-- Member 4: Sanya Mehta -->
+<div class="p-3 rounded-xl bg-surface-container-lowest brutal-border border-[2px] brutal-shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest brutal-border border-[2px] shrink-0 flex items-center justify-center font-headline-sm text-body-md font-bold text-on-surface">
+                  SM
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">Sanya Mehta</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant truncate">sanya.m@acme.io • Marketing Lead</span>
+</div>
+</div>
+<div class="shrink-0">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge uppercase font-bold brutal-border border-[1.5px]">
+                  VIEWER
+                </span>
+</div>
+</div>
+<!-- Add Member CTA -->
+<button class="w-full mt-2 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all flex items-center justify-center gap-2" data-placeholder="Team invitations are not connected yet; no invite was sent." id="inviteMemberBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+              + Invite Team Member
+            </button>
+</div>
+</section>
+<!-- Security & Data Governance Card -->
+<section class="rounded-[20px] bg-surface-container-lowest brutal-border brutal-shadow flex flex-col overflow-hidden">
+<div class="p-space-md border-b-[3px] border-on-surface bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-error-container text-on-error-container brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[20px]">encrypted</span>
+</span>
+<h2 class="font-headline-md text-headline-sm text-on-surface">Security &amp; Data Governance</h2>
+</div>
+<span class="font-label-badge text-label-badge bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full brutal-border border-[2px] uppercase">
+              SOC-2 TYPE II
+            </span>
+</div>
+<div class="p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container border-[2px] border-on-surface">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Mandatory 2FA Policy</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Enforced hardware key / Authenticator app for all Admins.</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge font-bold border-[1.5px] border-on-surface">ENFORCED</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container border-[2px] border-on-surface">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Audit Log Retention Policy</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Immutable encrypted event records kept indefinitely.</span>
+</div>
+<span class="font-label-code text-label-code font-bold text-on-surface bg-surface-container-lowest px-2 py-0.5 rounded border-[1.5px] border-on-surface">365 DAYS</span>
+</div>
+<button class="mt-1 w-full py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all flex items-center justify-center gap-2" data-placeholder="Audit trail export is not connected yet; no archive was created." id="exportAuditBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+              Download Complete Audit Trail (JSON/CSV)
+            </button>
+</div>
+</section>
+</div>
+</div>
+<!-- Bottom Autonomous Safety Banner -->
+<div class="p-space-md rounded-[20px] bg-primary-fixed border-[3px] border-on-surface brutal-shadow flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-primary-container text-on-primary brutal-border border-[2px]">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-md font-bold text-on-primary-fixed">Autonomous Safety Circuit Breaker Active</span>
+<span class="font-body-sm text-[12px] text-on-primary-fixed-variant">AI cannot cancel contracts or authorize transfers above ₹50,000 without 2-party CFO multi-sig clearance.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-headline-sm text-body-sm font-bold brutal-border border-[2px] brutal-shadow-sm brutal-btn hover:bg-surface-container transition-all" data-placeholder="Spending safeguard review is not available in this demo yet." type="button">
+          Review Spending Safeguards
+        </button>
+</div>
+</div>
+</div>
+</div>
+</main></div>
+  <script src="js/api.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/pages/settings.js"></script>
+  <script src="js/demo/demo-config.js"></script>
+  <script src="js/demo/demo-controller.js"></script>
+  <script src="js/demo/demo-bootstrap.js"></script>
+</body></html>

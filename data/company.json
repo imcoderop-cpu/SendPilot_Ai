@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-11-01",
+  "company": {
+    "id": "acme_technologies",
+    "name": "Acme Technologies",
+    "industry": "Software / SaaS",
+    "country": "India",
+    "country_code": "IN",
+    "currency": "INR",
+    "timezone": "Asia/Kolkata",
+    "website": "https://acme-technologies.in",
+    "employee_count": 250,
+    "monthly_budget": 4200000,
+    "annual_budget": 50400000,
+    "health_score": 83,
+    "business_metrics": {
+      "as_of_date": "2026-11-01",
+      "monthly_saas_spend": 3741900,
+      "annualized_saas_spend": 44902800,
+      "budget_utilization_percent": 89.1,
+      "potential_monthly_savings": 465800,
+      "potential_annual_savings": 5589600,
+      "subscription_count": 55,
+      "active_subscription_count": 54,
+      "vendor_count": 55,
+      "total_seats": 2319,
+      "active_seats": 2029,
+      "ghost_licenses": 290,
+      "average_monthly_cost_per_employee": 14968,
+      "business_health_score": 83,
+      "transaction_count": 366
+    }
+  }
+}
