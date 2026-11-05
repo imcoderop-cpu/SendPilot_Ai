@@ -2,6 +2,8 @@
 
 SpendPilot AI is a finance-operations dashboard prepared for the **PayPal AI Hackathon 2026**. It helps a team explore SaaS spend, renewal risk, unused seats, and possible savings through a dataset-backed dashboard and AI-assisted analysis.
 
+**Live preview:** [Open SpendPilot AI](https://spendpilot-ai-xz7p.onrender.com/)
+
 The app is designed as a polished, interactive hackathon demo. It uses synthetic company, subscription, and PayPal sandbox-ledger data; it does **not** connect to or change a real PayPal account, send vendor emails, or modify subscriptions.
 
 ## What it does
